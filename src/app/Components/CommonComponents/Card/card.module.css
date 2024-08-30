@@ -28,11 +28,18 @@
   align-items: center;
 }
 
-
+/* tab */
 @media (320px < width < 950px) {
-  /* … */
   .card_header {
       flex-direction: column;
       align-items: flex-start;
     }
+}
+
+/* phone */
+@media(width < 320px) {
+  .card_header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

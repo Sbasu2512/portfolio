@@ -41,6 +41,16 @@
     margin-left: 0.5rem;
 }
 
+.bottom_margin{
+    margin-bottom: 1.5rem;
+}
+
 .white_background{
     background-color: #f6b45e;
+}
+
+@media(width < 450px) {
+    .bottom_margin {
+            margin-bottom: 8rem;
+        }
 }

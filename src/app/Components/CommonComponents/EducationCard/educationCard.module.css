@@ -29,10 +29,16 @@
   justify-content: space-between;
 }
 
+/* tab */
 @media (320px < width < 950px) {
-
-  /* … */
   .header {
     flex-direction: column;
   }
+}
+
+/* phone */
+@media(width < 320px){
+  .header {
+      flex-direction: column;
+    }
 }
