@@ -9,43 +9,55 @@ import styles from "./educationCard.module.css";
 
 export default function EducationCard(props) {
   const {
-    course_name, institute, grad_year, location, degree_type,description
+    course_name,
+    institute,
+    grad_year,
+    location,
+    degree_type,
+    description,
   } = props.education;
 
   return (
-    <Card sx={{ width: "100%", zIndex: 0, backgroundColor:"#f8c786", borderRadius:'1rem' }}>
+    <Card
+      sx={{
+        width: "100%",
+        zIndex: 0,
+        backgroundColor: "#f8c786",
+        borderRadius: "1rem",
+      }}
+    >
       <CardActionArea>
         <CardContent>
           <div>
-            <div
-              className={`d-flex flex-column w-100`}
-            >
-                <div className={`d-flex justify-content-between`}>
-                <span><FontAwesomeIcon icon={faSchool} /><span className={`${styles.roboto_bold} ${styles.left_margin}`}> {institute}</span></span>
-                <span className={`${styles.roboto}`}>
-                {degree_type}
+            <div className={`${styles.wrapper}`}>
+              <div className={`${styles.header}`}>
+                <span>
+                  <FontAwesomeIcon icon={faSchool} />
+                  <span
+                    className={`${styles.roboto_bold} ${styles.left_margin}`}
+                  >
+                    {" "}
+                    {institute}
+                  </span>
                 </span>
-              <span>
-                <span></span>
-                <FontAwesomeIcon icon={faLocationDot} />
-                <span className={`${styles.roboto} ${styles.left_margin}`}>
-                  {" "}
-                  {location}{" "}
+                <span className={`${styles.roboto}`}>{degree_type}</span>
+                <span>
+                  <span></span>
+                  <FontAwesomeIcon icon={faLocationDot} />
+                  <span className={`${styles.roboto} ${styles.left_margin}`}>
+                    {" "}
+                    {location}{" "}
+                  </span>
                 </span>
-              </span>
-                </div>
-                <div className={`d-flex justify-content-between`}>
-              <span className={`${styles.roboto}`}>{course_name} </span>
-              <span className={`${styles.roboto}`}>
-                {grad_year}
-              </span>
-                </div>
+              </div>
+              <div className={`${styles.header}`}>
+                <span className={`${styles.roboto}`}>{course_name} </span>
+                <span className={`${styles.roboto}`}>{grad_year}</span>
+              </div>
             </div>
           </div>
 
-          <div className={`mt-3 ${styles.roboto}`}>
-            {description}
-          </div>
+          <div className={`mt-3 ${styles.roboto}`}>{description}</div>
         </CardContent>
       </CardActionArea>
     </Card>

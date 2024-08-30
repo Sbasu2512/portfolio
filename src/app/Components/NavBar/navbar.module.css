@@ -31,3 +31,9 @@
   width: 100%;
   z-index: 100;
 }
+
+/*  320px or 480px (for mobile phones),
+ 768px (for tablets) */
+@media (width < 768px) {
+  /* … */
+}

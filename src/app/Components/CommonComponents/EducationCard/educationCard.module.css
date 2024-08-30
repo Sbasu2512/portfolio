@@ -15,3 +15,24 @@
   font-weight: 700;
   font-style: normal;
 }
+
+/* d-flex flex-column w-100 */
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* d-flex justify-content-between */
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (320px < width < 950px) {
+
+  /* … */
+  .header {
+    flex-direction: column;
+  }
+}

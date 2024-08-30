@@ -15,3 +15,24 @@
   font-weight: 700;
   font-style: normal;
 }
+
+.flex_display{
+  display: flex;
+}
+
+/* d-flex justify-content-between w-100 align-items-center */
+.card_header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+
+@media (320px < width < 950px) {
+  /* … */
+  .card_header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+}
