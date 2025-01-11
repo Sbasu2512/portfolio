@@ -15,7 +15,10 @@ export default function CommonCard(props) {
     company_logo,
     position,
     start_date,
+    client,
   } = props.work_details;
+
+  const company_nom = client ? `${client}-${company_name}` : company_name; ;
 
   return (
     <Card
@@ -30,7 +33,7 @@ export default function CommonCard(props) {
         <CardContent>
           <div className={`${styles.flex_display}`}>
             <div className={`${styles.card_header} ${styles.left_margin}`}>
-              <span className={`${styles.roboto}`}>{company_name}</span>
+              <span className={`${styles.roboto}`}>{company_nom}</span>
               <span className={`${styles.roboto_bold}`}>{position} </span>
               <span className={`${styles.roboto}`}>
                 {start_date} - {end_date}
