@@ -1,10 +1,33 @@
 {
-    "work_experience":[
+    "work_experience": [
+        {
+            "company_name": "NexSemi System Pvt Ltd",
+            "location": "Chennai, TN, India",
+            "start_date": "Nov 2024",
+            "end_date": "Present",
+            "position": "Senior Software Engineer",
+            "client": "Logitech Pvt Ltd",
+            "responsibilities": [
+                "Developed reusable UI components and containers using React.js, Redux, and SCSS.",
+                "Wrote extensive unit and acceptance tests to ensure code reliability.",
+                "Demonstrated strong ownership in writing understandable, maintainable, and reusable software.",
+                "Aligned with product goals to deliver optimal user experiences.",
+                "Leveraged strong CS fundamentals, including algorithms, data structures, and systems design.",
+                "Applied strong JavaScript fundamentals such as closures, hoisting, callbacks, and variable scoping.",
+                "Gained excellent understanding of the JavaScript event loop.",
+                "Created robust CSS layouts using legacy and modern techniques like Flexbox and CSS Grid.",
+                "Designed and implemented CSS animations with hands-on experience in theming and accessibility.",
+                "Deep understanding of the React ecosystem, including data management, middleware, rendering, and UI component testing.",
+                "Enhanced application performance through optimization techniques and performance metrics tools.",
+                "Utilized memorization and debouncing techniques for efficient coding.",
+                "Proficient in source control systems like Git and GitHub."
+            ]
+        },
         {
             "company_name": "NexSemi System Pvt Ltd",
             "location": "Bangalore, IN",
             "start_date": "Jan 2024",
-            "end_date": "Present",
+            "end_date": "Oct 2024",
             "position": "Senior Software Engineer",
             "client": "Atonarp Inc",
             "responsibilities": [
@@ -23,7 +46,7 @@
                 "Wrote sprint test cases on every sprint end as well as helped in deployment, sanity testing etc.",
                 "Used JIRA to track various tasks and GitLab for code collaboration."
             ]
-        },        
+        },
         {
             "company_name": "Charger Logistics",
             "position": "Front End Developer",
@@ -157,191 +180,191 @@
             ]
         }
     ],
-    "education":[
+    "education": [
         {
-          "course_name": "Full-stack Web Development",
-          "institute": "Lighthouse Labs",
-          "grad_year": 2021,
-          "location": "Toronto, ON, CA",
-          "degree_type": "Bootcamp",
-          "description":"Full-stack Web Development Bootcamp where I learned Javascript, Node.js, Databases & Data Modeling, HTML, CSS, SASS, Software Architecture, React JS, and Ruby on Rails."
+            "course_name": "Full-stack Web Development",
+            "institute": "Lighthouse Labs",
+            "grad_year": 2021,
+            "location": "Toronto, ON, CA",
+            "degree_type": "Bootcamp",
+            "description": "Full-stack Web Development Bootcamp where I learned Javascript, Node.js, Databases & Data Modeling, HTML, CSS, SASS, Software Architecture, React JS, and Ruby on Rails."
         },
         {
-          "course_name": "Engineering Business & Safeety Management",
-          "institute": "Confederation College",
-          "grad_year": 2016,
-          "location": "Thunder Bay, ON, CA",
-          "degree_type": "Post Graduate Diploma",
-          "description":"Post Graduate Diploma in Engineering Business & Safety Management \nOverall GPA: 3.59/4.00\nRoll of Honour Letter of first class standing"   
-        
+            "course_name": "Engineering Business & Safeety Management",
+            "institute": "Confederation College",
+            "grad_year": 2016,
+            "location": "Thunder Bay, ON, CA",
+            "degree_type": "Post Graduate Diploma",
+            "description": "Post Graduate Diploma in Engineering Business & Safety Management \nOverall GPA: 3.59/4.00\nRoll of Honour Letter of first class standing"
         },
         {
-          "course_name": "Mechanical Engineering",
-          "institute": "SRM University",
-          "grad_year": 2014,
-          "location": "Chennai, TN, India",
-          "degree_type": "Bachelor’s Degree",
-          "description":"Majored in Mechanical Engineering"
+            "course_name": "Mechanical Engineering",
+            "institute": "SRM University",
+            "grad_year": 2014,
+            "location": "Chennai, TN, India",
+            "degree_type": "Bachelor’s Degree",
+            "description": "Majored in Mechanical Engineering"
         }
-      ],
-      "projects":[
+    ],
+    "projects": [
         {
-            "project_name":"BlogPostApp",
-            "tech_stack":"",
-            "image_url":"https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/BlogPostApp"
+            "project_name": "BlogPostApp",
+            "tech_stack": "",
+            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/BlogPostApp"
         },
         {
-          "project_name": "Lotide",
-          "tech_stack": "JavaScript",
-          "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a clone of lodash JavaScript library to practice various types of functions using JavaScript.",
-          "repo_link": "",
-          "live_link": "",
-          "image_url":"https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/lotide"
+            "project_name": "Lotide",
+            "tech_stack": "JavaScript",
+            "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a clone of lodash JavaScript library to practice various types of functions using JavaScript.",
+            "repo_link": "",
+            "live_link": "",
+            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/lotide"
         },
         {
-          "project_name": "TinyApp",
-          "tech_stack": "HTML, CSS, AJAX, Express JS, Node JS",
-          "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a full-stack web app built with an HTTP Server that handles requests from the browser (client). Along the way we got introduced to some more advanced JavaScript and Node concepts, and we also learnt more about Express JS.",
-          "repo_link": "",
-          "live_link": "",
-          "image_url":"https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/tinyapp"
+            "project_name": "TinyApp",
+            "tech_stack": "HTML, CSS, AJAX, Express JS, Node JS",
+            "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a full-stack web app built with an HTTP Server that handles requests from the browser (client). Along the way we got introduced to some more advanced JavaScript and Node concepts, and we also learnt more about Express JS.",
+            "repo_link": "",
+            "live_link": "",
+            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/tinyapp"
         },
         {
-          "project_name": "Tweeter",
-          "tech_stack": "HTML, CSS, JS, jQuery, Ajax",
-          "description": "It is a single page twitter clone built with HTML, CSS, JS, jQuery and Ajax.",
-          "repo_link": "",
-          "live_link": "",
-          "image_url":"https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/tweeter"
+            "project_name": "Tweeter",
+            "tech_stack": "HTML, CSS, JS, jQuery, Ajax",
+            "description": "It is a single page twitter clone built with HTML, CSS, JS, jQuery and Ajax.",
+            "repo_link": "",
+            "live_link": "",
+            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/tweeter"
         },
         {
-          "project_name": "Interview Scheduler",
-          "tech_stack": "React, R-spec, Cypress, Storybook, Axios",
-          "description": "It is a React application that allows users to book and cancel interviews. In this project, there is a combination of concise API with a WebSocket server to build a real-time experience. Testing was done using R-spec and Cypress. We learnt about React Hooks through this project and implementing REST API with axios.",
-          "repo_link": "",
-          "live_link": "",
-          "image_url":"https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/Interview-Scheduler"
+            "project_name": "Interview Scheduler",
+            "tech_stack": "React, R-spec, Cypress, Storybook, Axios",
+            "description": "It is a React application that allows users to book and cancel interviews. In this project, there is a combination of concise API with a WebSocket server to build a real-time experience. Testing was done using R-spec and Cypress. We learnt about React Hooks through this project and implementing REST API with axios.",
+            "repo_link": "",
+            "live_link": "",
+            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/Interview-Scheduler"
         },
         {
-          "project_name": "Jungle",
-          "tech_stack": "Ruby on Rails, HTML, CSS, JavaScript, jQuery",
-          "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a mini ecommerce website built with Ruby with Rails for the purposes of learning Rails 4.2 by example.",
-          "repo_link": "",
-          "live_link": "",
-          "image_url":"https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/jungle-rails"
+            "project_name": "Jungle",
+            "tech_stack": "Ruby on Rails, HTML, CSS, JavaScript, jQuery",
+            "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a mini ecommerce website built with Ruby with Rails for the purposes of learning Rails 4.2 by example.",
+            "repo_link": "",
+            "live_link": "",
+            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/jungle-rails"
         }
-      ],
-      "skills":[
+    ],
+    "skills": [
         {
-            "name":"HTML 5",
-            "icon":"/assets/svg/html5-brands-solid.svg"
+            "name": "HTML 5",
+            "icon": "/assets/svg/html5-brands-solid.svg"
         },
         {
-            "name":"CSS 3",
-            "icon":"/assets/svg/css3-alt-brands-solid.svg"
+            "name": "CSS 3",
+            "icon": "/assets/svg/css3-alt-brands-solid.svg"
         },
         {
-            "name":"SASS",
-            "icon":"/assets/svg/sass-brands-solid.svg"
+            "name": "SASS",
+            "icon": "/assets/svg/sass-brands-solid.svg"
         },
         {
-            "name":"jQuery",
-            "icon":"/assets/svg/icons8-jquery.svg"
+            "name": "jQuery",
+            "icon": "/assets/svg/icons8-jquery.svg"
         },
         {
-            "name":"JavaScript",
-            "icon":"/assets/svg/js-brands-solid.svg"
+            "name": "JavaScript",
+            "icon": "/assets/svg/js-brands-solid.svg"
         },
         {
-            "name":"Express JS",
-            "icon":"/assets/svg/icons8-express-js.svg"
+            "name": "Express JS",
+            "icon": "/assets/svg/icons8-express-js.svg"
         },
         {
-            "name":"React JS",
-            "icon":"/assets/svg/icons8-react.svg"
+            "name": "React JS",
+            "icon": "/assets/svg/icons8-react.svg"
         },
         {
-            "name":"Next JS",
-            "icon":"/assets/svg/next.svg"
+            "name": "Next JS",
+            "icon": "/assets/svg/next.svg"
         },
         {
-            "name":"Node JS",
-            "icon":"/assets/svg/node-brands-solid.svg"
+            "name": "Node JS",
+            "icon": "/assets/svg/node-brands-solid.svg"
         },
         {
-            "name":"EJS",
-            "icon":"/assets/svg/icons8-ejs.svg"
+            "name": "EJS",
+            "icon": "/assets/svg/icons8-ejs.svg"
         },
         {
-            "name":"Java",
-            "icon":"/assets/svg/java-brands-solid.svg"
+            "name": "Java",
+            "icon": "/assets/svg/java-brands-solid.svg"
         },
         {
-            "name":"MySQL",
-            "icon":"/assets/svg/icons8-mysql.svg"
+            "name": "MySQL",
+            "icon": "/assets/svg/icons8-mysql.svg"
         },
         {
-            "name":"Firebase",
-            "icon":"/assets/svg/icons8-firebase.svg"
+            "name": "Firebase",
+            "icon": "/assets/svg/icons8-firebase.svg"
         },
         {
-            "name":"Redux",
-            "icon":"/assets/svg/icons8-redux.png"
+            "name": "Redux",
+            "icon": "/assets/svg/icons8-redux.png"
         },
         {
-            "name":"BitBucket",
-            "icon":"/assets/svg/bitbucket-brands-solid.svg"
+            "name": "BitBucket",
+            "icon": "/assets/svg/bitbucket-brands-solid.svg"
         },
         {
-            "name":"GitHub",
-            "icon":"/assets/svg/github-brands-solid.svg"
+            "name": "GitHub",
+            "icon": "/assets/svg/github-brands-solid.svg"
         },
         {
-            "name":"TypeScript",
-            "icon":"/assets/svg/icons8-typescript.svg"
+            "name": "TypeScript",
+            "icon": "/assets/svg/icons8-typescript.svg"
         },
         {
-            "name":"Angular JS",
-            "icon":"/assets/svg/angular-brands-solid.svg"
+            "name": "Angular JS",
+            "icon": "/assets/svg/angular-brands-solid.svg"
         },
         {
-            "name":"PostGre SQL",
-            "icon":"/assets/svg/icons8-postgresql.svg"
+            "name": "PostGre SQL",
+            "icon": "/assets/svg/icons8-postgresql.svg"
         },
         {
-            "name":"Python",
-            "icon":"/assets/svg/python-brands-solid.svg"
+            "name": "Python",
+            "icon": "/assets/svg/python-brands-solid.svg"
         },
         {
-            "name":"Anaconda",
-            "icon":"/assets/svg/icons8-anaconda.svg"
+            "name": "Anaconda",
+            "icon": "/assets/svg/icons8-anaconda.svg"
         },
         {
-            "name":"gRPC",
-            "icon":"/assets/svg/grpc-seeklogo.svg"
+            "name": "gRPC",
+            "icon": "/assets/svg/grpc-seeklogo.svg"
         },
         {
-            "name":"RxJs",
-            "icon":"/assets/svg/RxJs_Logo_Basic.svg"
-        },{
-            "name":"Cypress",
-            "icon":"/assets/svg/cypress.svg"
+            "name": "RxJs",
+            "icon": "/assets/svg/RxJs_Logo_Basic.svg"
+        },
+        {
+            "name": "Cypress",
+            "icon": "/assets/svg/cypress.svg"
+        },
+        {
+            "name": "StoryBook",
+            "icon": "/assets/svg/storybook-icon.svg"
+        },
+        {
+            "name": "Ajax",
+            "icon": "/assets/svg/xml-dummy.svg"
+        },
+        {
+            "name": "Axios",
+            "icon": "/assets/svg/axios-icon.svg"
+        },
+        {
+            "name": "Mongo Db",
+            "icon": "/assets/svg/mongodb-icon.svg"
         }
-        ,{
-            "name":"StoryBook",
-            "icon":"/assets/svg/storybook-icon.svg"
-        },
-        {
-            "name":"Ajax",
-            "icon":"/assets/svg/xml-dummy.svg"
-        },
-        {
-            "name":"Axios",
-            "icon":"/assets/svg/axios-icon.svg"
-        },
-        {
-            "name":"Mongo Db",
-            "icon":"/assets/svg/mongodb-icon.svg"
-        }
-      ]       
+    ]
 }
