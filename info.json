@@ -74,30 +74,6 @@
             ]
         },
         {
-            "company_name": "United Monks",
-            "position": "Full-Stack Developer",
-            "location": "Kolkata, India",
-            "start_date": "April 2022",
-            "end_date": "Oct 2022",
-            "responsibilities": [
-                "Implemented user interface (UI) solutions in React JS and CSS to build a better user experience. The Bootstrap CSS Framework was heavily utilised.",
-                "Developed a user flow (UX) and requirement sheet based on an understanding of the client’s requirements.",
-                "Embedded JS (EJS) views were converted from Laravel template views.",
-                "Developed various features and implemented basic plugins such as sluggish loading, toastify and isotope.",
-                "Utilized with a variety of hooks, such as useRef, useState, useReducer, use context, and so on.",
-                "Applied Redux/Use Context hook for global state management and reducer functions.",
-                "Next JS was used to optimise large images and for application routing.",
-                "Conducted a root cause analysis and developed solutions to product faults.",
-                "Experienced working in the integration of various IoT systems and different external APIs, e.g. RazorPay, Twilio etc.",
-                "Developed backend CMS system and Restful API routes.",
-                "Lead troubleshooting efforts for bugs that exist in a production setting.",
-                "Involved in various production bug fixes, analyzing and improving overall application performance.",
-                "Collaborated closely with senior leadership and stakeholders to fully comprehend customer requirements.",
-                "Managed a project team of three additional front-end developers.",
-                "Postman was utilized to test REST API’s."
-            ]
-        },
-        {
             "company_name": "ShipHaul Logistics",
             "position": "Web Developer",
             "location": "Montreal, QC, CA",
