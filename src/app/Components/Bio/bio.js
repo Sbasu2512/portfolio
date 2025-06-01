@@ -1,69 +1,88 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./bio.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
+
+const picture = {
+  purple: {src: "/assets/images/pictures/purple.jpg", width: '550px'},
+  light: {src: "/assets/images/pictures/light_pic.jpg", width:'400px'},
+  dark: {src: "/assets/images/pictures/dark_pic.jpg", width: '450px'},
+};
 
 
-export default function Bio() {
-    
-
+export default function Bio({theme}) {
   return (
-    <div
-      className={`container-fluid mt-4 ${styles.white_background} ${styles.h_100pct}`}
-    >
-      <div className={`row m-1 ${styles.center_div}`}>
-        <div className={styles.center_div}>
-          <h1 className="mt-2">
-            <span>
-              <FontAwesomeIcon icon={faUser} />
-            </span>
-            <span className={`${styles.roboto_bold} ${styles.left_margin}`}>
-              About Me!
-            </span>
-          </h1>
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <div className={styles.image_container}>
+          <div className={styles.image}>
+            <img
+              src={picture[theme].src}
+              style={{ width: picture[theme].width, height: "100%" }}
+            />
+          </div>
         </div>
-        <div
-          className={`${styles.left_div} ${styles.flex_col} ${styles.roboto} ${styles.w_80pct} ${styles.pad_3rem}`}
-        >
-          <p>
-            Hi, My name is <strong>Sayantan</strong>. I am based out of India. I
-            am currently working for{" "}
-            <strong> Next Semi Private Limited </strong> as a{" "}
-            <i>Senior Software Engineer</i>.
-          </p>
-          <p>
-            I am a result-oriented Full-Stack Web Developer with nearly three
-            years of hands-on experience in system analysis, conceptual design,
-            software architecture, and development. My expertise spans across
-            web application design, development, testing, and maintenance,
-            complemented by a solid background in quality control, installation,
-            and implementation. With a strong command of both front-end and
-            back-end technologies, I have consistently delivered high-quality,
-            scalable solutions in fast-paced and agile environments.
-          </p>
-          <p>
-            My technical skill set includes proficiency in HTML5, CSS3,
-            JavaScript, TypeScript, ReactJS, NodeJS, and various CSS frameworks
-            like Bootstrap, Ant Design, and Material UI. I possess a deep
-            understanding of the Software Development Life Cycle (SDLC) and have
-            served as a crucial link between Subject Matter Experts (SMEs) and
-            technologists throughout project lifecycles. My experience also
-            extends to version control systems such as Git, GitHub, and GitLab,
-            as well as CI/CD pipelines, ensuring smooth and efficient
-            development processes.
-          </p>
-          <p>
-            I thrive in collaborative settings and am equally comfortable
-            managing tasks independently. My ability to quickly assimilate new
-            technologies and apply them to dynamic IT markets makes me a
-            valuable asset in any development team. With a commitment to
-            excellence, strong analytical abilities, and exceptional
-            communication skills, I am dedicated to delivering innovative
-            solutions that drive success.
-          </p>
-        </div>        
+        <div className={styles.bio_container}>
+          <h1 className={styles.playfair_display_header}>About Me!</h1>
+          <span className={styles.bio_span}>
+            <section className={styles.playfair_display}>
+              <p>
+                👋 Hey there! I&apos;m a Senior Software Engineer
+                <strong> Based in Chennai | Originally from Kolkata</strong>
+              </p>
+
+              <p>
+                I&apos;m a passionate <strong>Senior Software Engineer</strong>{" "}
+                with a strong focus on building
+                <strong>elegant</strong>, <strong>performant</strong>, and{" "}
+                <strong>scalable</strong> web applications. With over{" "}
+                <strong>three years of hands-on experience</strong>, I&apos;ve
+                had the privilege of collaborating with world-class teams at{" "}
+                <strong>NexSemi Systems</strong>, <strong>Logitech</strong>,
+                <strong>Atonarp</strong>, <strong>Charger Logistics</strong>,
+                and <strong>ShipHaul Logistics</strong>.
+              </p>
+
+              <p>
+                My journey spans across frontend and full-stack development.
+                From designing responsive UI components in{" "}
+                <strong>React</strong>, <strong>Next.js</strong>, and{" "}
+                <strong>Angular</strong>, to writing backend logic in{" "}
+                <strong>Node.js</strong> and <strong>Python</strong>, I love
+                building experiences that work and delight users.
+              </p>
+
+              <p>
+                I write <strong>modular, reusable components</strong> and follow
+                best practices to deliver scalable code. I&apos;m deeply
+                invested in <strong>JavaScript fundamentals</strong> and bring
+                that knowledge to tasks like optimizing large uploads, managing
+                state, or animating UIs with <strong>Flexbox</strong>,
+                <strong>CSS Grid</strong>, and <strong>SCSS</strong>. I focus on{" "}
+                <strong>performance</strong>, <strong>accessibility</strong>,
+                and a solid
+                <strong>UI/UX foundation</strong>. I work well in Agile/Scrum
+                teams, write tests, and use tools like Git, Docker, and gRPC in
+                my day-to-day development.
+              </p>
+
+              <h2>⚽ Outside the Code</h2>
+              <p>
+                When I&apos;m not coding, you&apos;ll find me on the football
+                field, catching up on matches (huge Manchester United and KKR
+                fan!), exploring new places, or lost in a good book.
+              </p>
+
+              <h2>🚀 Let&apos;s Collaborate</h2>
+              <p>
+                I love turning ideas into intuitive, functional software.
+                Whether you&apos;re building something new or refining a
+                product, I bring <strong>technical depth</strong>,{" "}
+                <strong>user empathy</strong>, and a
+                <strong>relentless attention to detail</strong>.
+              </p>
+            </section>
+          </span>
+        </div>
       </div>
     </div>
   );

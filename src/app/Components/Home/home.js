@@ -1,69 +1,116 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./home.module.css";
 import { Typewriter } from "react-simple-typewriter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import Avatar from "@mui/material/Avatar";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export default function LandingPage() {
+// const avatars = {
+//   purple: [{src:"assets/images/avatars/purple_av.png", width: 150}, {src:"/assets/images/kkr.svg", width:90}],
+//   light: "assets/images/avatars/light_av.png",
+//   dark: "assets/images/avatars/dark_av.png",
+// };
+
+const avatars = {
+  purple: "assets/images/avatars/purple_av.png",
+  light: "assets/images/avatars/light_av.png",
+  dark: "assets/images/avatars/dark_av.png",
+};
+
+// const ROTATION_INTERVAL_MS =  60 * 1000;
+
+export default function LandingPage({theme}) {
+
+  const avatarList = avatars[theme];
+  // const [index, setIndex] = useState(0);
+  // const [fade, setFade] = useState(true);
+
+  // useEffect(() => {
+  //   if (!Array.isArray(avatarList) || avatarList.length === 0) return;
+
+  //   const interval = setInterval(() => {
+  //     setFade(false); 
+
+  //     setTimeout(() => {
+  //       setIndex((prev) => (prev + 1) % avatarList.length);
+  //       setFade(true);
+  //     }, 500);
+  //   }, ROTATION_INTERVAL_MS);
+
+  //   return () => clearInterval(interval);
+  // }, [avatarList]);
+
+  // useEffect(()=>{
+  //   setIndex(0);
+  // }, [theme])
+
   return (
-    <div className={`container-fluid mt-2 ${styles.home}`}>
-      <div className={`row w-100 h-100 `}>
-        <div className={`${styles.center_container}`}>
-          <div>
-            <Avatar
-              alt="Remy Sharp"
-              src="/assets/images/cartoon.jpg"
-              sx={{ width: 300, height: 300 }}
+    <div className={styles.container} id="#">
+      <div className={styles.wrapper}>
+        <div className={styles.avatar}>
+          <div className={styles.circle}>
+            <img
+              src={
+                !Array.isArray(avatarList) ? avatarList : avatarList[index].src
+              }
+              style={{
+                width: !Array.isArray(avatarList)
+                  ? 150
+                  : avatarList[index].width,
+                height: 160,
+                objectFit: "cover",
+                transition: "opacity 0.5s ease-in-out",
+                opacity: 1,
+                textAlign: "center",
+                color: "transparent",
+                textIndent: "10000px",
+                marginBottom: "0.4rem",
+                marginLeft: "0.5rem",
+              }}
             />
           </div>
-          <div className={`${styles.text} mt-3`}>
-            <h1 className={`${styles.tilt}`}> - Sayantan Basu - </h1>
-          </div>
-          <div
-            className={`${styles.text_roboto} mt-4 ${styles.white} ${styles.font_16px}`}
-          >
-            <h3>
-              <span className={`${styles.font_16px}`}>
-                I am a
-                <span className={styles.left_margin}>
-                  <Typewriter
-                    words={[
-                      "Full-Stack Developer",
-                      "Front-End Developer",
-                      "Backend-Developer",
-                      "MERN Stack Developer",
-                      "PERN Stack Developer",
-                    ]}
-                    loop={0}
-                    cursor={true}
-                    cursorBlinking={true}
-                  />
-                </span>
-              </span>
-            </h3>
-          </div>
-          <div className={`${styles.socials} mt-2`}>
-            <div>
-              <a href="https://twitter.com/SayantanBasu251" target="_blank">
-                <FontAwesomeIcon icon={faXTwitter} className={styles.white} />
-              </a>
-            </div>
+        </div>
+        <div className={styles.accent}>
+          <span>
+            <h1 className={styles.playfair_display_header}>Sayantan Basu</h1>
+          </span>
+          <span className={styles.playfair_display}>
+            <Typewriter
+              words={[
+                "Full-Stack Developer",
+                "Front-End Developer",
+                "Backend-Developer",
+                "MERN Stack Developer",
+                "PERN Stack Developer",
+              ]}
+              loop={0}
+              cursor={true}
+              cursorBlinking={true}
+            />
+          </span>
+        </div>
+        <div className={styles.socials_container}>
+          <div className={styles.socials}>
             <div>
               <a
                 href="https://www.linkedin.com/in/sayantan-basu-73ab4a92/"
                 target="_blank"
               >
-                <FontAwesomeIcon icon={faLinkedin} className={styles.white} />
+                <FontAwesomeIcon
+                  icon={faLinkedin}
+                  className={styles.icon_social}
+                />
               </a>
             </div>
             <div>
               <a href="https://github.com/Sbasu2512" target="_blank">
-                <FontAwesomeIcon icon={faGithub} className={styles.white} />
+                <FontAwesomeIcon
+                  icon={faGithub}
+                  className={styles.icon_social}
+                />
               </a>
             </div>
             <div>
@@ -73,8 +120,14 @@ export default function LandingPage() {
                 rel="noopener noreferrer"
                 className={`${styles.text_no_dec}`}
               >
-                <FontAwesomeIcon icon={faFile} className={styles.white}/>
+                <FontAwesomeIcon icon={faFile} className={styles.icon_social} />
               </a>
+            </div>
+          </div>
+          <div className={styles.contact}>
+            <div className={styles.contact_wrapper}>
+              <span>Get in Touch</span>
+              <FontAwesomeIcon icon={faArrowRight} />
             </div>
           </div>
         </div>
