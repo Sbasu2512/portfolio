@@ -25,7 +25,8 @@ export default function CommonCard(props) {
       sx={{
         width: "100%",
         zIndex: 0,
-        backgroundColor: "#f8c786",
+        backgroundColor: 'var(--accent-color)',
+        color: 'var(--text-color)',
         borderRadius: "1rem",
       }}
     >

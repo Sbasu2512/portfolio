@@ -22,7 +22,8 @@ export default function EducationCard(props) {
       sx={{
         width: "100%",
         zIndex: 0,
-        backgroundColor: "#f8c786",
+        backgroundColor: "var(--accent-color)",
+        color: "var(--text-color)",
         borderRadius: "1rem",
       }}
     >
@@ -57,7 +58,7 @@ export default function EducationCard(props) {
             </div>
           </div>
 
-          <div className={`mt-3 ${styles.roboto}`}>{description}</div>
+          <div className={`${styles.roboto}`}>{description}</div>
         </CardContent>
       </CardActionArea>
     </Card>
