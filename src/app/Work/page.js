@@ -13,46 +13,34 @@ export default function Work() {
   const [educationDetails, setEducationDetails] = useState(info.education);
 
   return (
-    <div className={`mt-2 ${styles.white_background} ${styles.bottom_margin}`}>
-      <div className={`${styles.center_div}`}>
-        <h1 className="mt-4">
+    <div className={styles.container}>
+      <div className={styles.wrapper}>
+        <div className={styles.work_ex_header}>
+          <h1 className={`${styles.playfair_display_header} `}>
+            <span>Work Experience</span>
+          </h1>
+        </div>
+        <div>
+          {jobDetails &&
+            jobDetails.map((detail, i) => (
+              <div key={i} className={styles.cards}>
+                <CommonCard work_details={detail} />
+              </div>
+            ))}
+        </div>
+        <div className={styles.work_ex_header}>
           <span>
-            <FontAwesomeIcon icon={faBriefcase} />
+            <h1 className={`${styles.playfair_display_header} `}>Education</h1>
           </span>
-          <span className={`${styles.roboto_bold} ${styles.left_margin}`}>
-            Work Experience
-          </span>
-        </h1>
-      </div>
-      <div
-        className={`${styles.left_div} ${styles.flex_col} ${styles.roboto} ${styles.w_80pct} ${styles.pad_3rem}`}
-      >
-        {jobDetails &&
-          jobDetails.map((detail, i) => (
-            <div key={i} className={`mt-2 w-100`}>
-              <CommonCard work_details={detail} />
-            </div>
-          ))}
-      </div>
-      <div className={styles.center_div}>
-        <h1 className="mt-4">
-          <span>
-            <FontAwesomeIcon icon={faGraduationCap} />
-          </span>
-          <span className={`${styles.roboto_bold} ${styles.left_margin}`}>
-            Education
-          </span>
-        </h1>
-      </div>
-      <div
-        className={`${styles.left_div} ${styles.flex_col} ${styles.roboto} ${styles.w_80pct} ${styles.pad_3rem}`}
-      >
-        {educationDetails &&
-          educationDetails.map((detail, i) => (
-            <div key={i} className="mt-2 w-100">
-              <EducationCard education={detail} />
-            </div>
-          ))}
+        </div>
+        <div className={styles.cards}>
+          {educationDetails &&
+            educationDetails.map((detail, i) => (
+              <div key={i} className={styles.cards}>
+                <EducationCard education={detail} />
+              </div>
+            ))}
+        </div>
       </div>
     </div>
   );

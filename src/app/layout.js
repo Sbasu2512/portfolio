@@ -1,14 +1,12 @@
-import { Inter } from "next/font/google";
-import "./globals.css";
 import Navbar from "./Components/NavBar/nav";
-import Footer from "./Components/Footer/footer";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Analytics } from "@vercel/analytics/react";
+import "./global.css"
+import { ThemeProvider } from "./context/ThemeContext";
 
 config.autoAddCss = false;
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Sayantan Basu",
@@ -27,11 +25,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} theme h-100 mt-4`}>
-        <Navbar />
-        {children}
+      <body>
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
         <Analytics />
-        <Footer />
       </body>
     </html>
   );

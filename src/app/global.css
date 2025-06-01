@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Exile&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+:root {
+  --main-color: #f7f2e0;
+  --accent-color: #e1b469;
+  --text-color: #544120;
+  --lighter-color: #ECC17A;
+  --animation-color-first: rgba(236, 193, 122, 0.2);
+  --animation-color-second: rgba(236, 193, 122, 0.4);
+  --animation-color-third: rgba(236, 193, 122, 0.8);
+}
+
+/* purple theme */
+.purple {
+  --main-color: #2b1a3f;
+  --accent-color: #7b3fbc;
+  --lighter-color: #af84e0;
+  --animation-color-first: rgba(175, 132, 224, 0.2);
+  --animation-color-second: rgba(175, 132, 224, 0.4);
+  --animation-color-third: rgba(175, 132, 224, 0.8);
+  --text-color: #fbe580;
+}
+
+/* dark theme */
+.dark {
+  --main-color: #290606;
+  --accent-color: #5a1717;
+  --text-color: #e6a6a6;
+  --lighter-color: #733535;
+  --animation-color-first: rgba(197, 123, 123, 0.2);
+  --animation-color-second: rgba(197, 123, 123, 0.4);
+  --animation-color-third: rgba(197, 123, 123, 0.8);
+
+}
+
+/* light theme */
+.light {
+  --main-color: #f7f2e0;
+  --accent-color: #e1b469;
+  --text-color: #544120;
+  --lighter-color: #ECC17A;
+  --animation-color-first: rgba(236, 193, 122, 0.2);
+  --animation-color-second: rgba(236, 193, 122, 0.4);
+  --animation-color-third: rgba(236, 193, 122, 0.8);
+}

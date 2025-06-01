@@ -162,8 +162,8 @@
             "institute": "Lighthouse Labs",
             "grad_year": 2021,
             "location": "Toronto, ON, CA",
-            "degree_type": "Bootcamp",
-            "description": "Full-stack Web Development Bootcamp where I learned Javascript, Node.js, Databases & Data Modeling, HTML, CSS, SASS, Software Architecture, React JS, and Ruby on Rails."
+            "degree_type": "Full-stack Web Development",
+            "description": "Completed a Full-Stack Web Development Bootcamp, where I gained hands-on experience with JavaScript, Node.js, HTML, CSS, SASS, React.js, and Ruby on Rails, alongside foundational knowledge in software architecture, databases, and data modeling."
         },
         {
             "course_name": "Engineering Business & Safeety Management",
@@ -171,7 +171,7 @@
             "grad_year": 2016,
             "location": "Thunder Bay, ON, CA",
             "degree_type": "Post Graduate Diploma",
-            "description": "Post Graduate Diploma in Engineering Business & Safety Management \nOverall GPA: 3.59/4.00\nRoll of Honour Letter of first class standing"
+            "description": "Awarded Roll of Honour for First Class Standing, recognizing academic excellence. Curriculum focused on the intersection of engineering operations, business strategy, and workplace safety—covering areas such as risk assessment, project management, regulatory compliance, and industrial safety systems. \n GPA: 3.59 / 4.00"
         },
         {
             "course_name": "Mechanical Engineering",
@@ -179,7 +179,7 @@
             "grad_year": 2014,
             "location": "Chennai, TN, India",
             "degree_type": "Bachelor’s Degree",
-            "description": "Majored in Mechanical Engineering"
+            "description": "Specialized in the principles of thermodynamics, fluid mechanics, materials science, and mechanical system design. The program provided a strong foundation in engineering mathematics, manufacturing processes, CAD/CAM, and finite element analysis (FEA), with applications across automotive, energy, and industrial systems."
         }
     ],
     "projects": [

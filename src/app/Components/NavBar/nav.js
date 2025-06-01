@@ -1,22 +1,44 @@
-import React from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import Link from "next/link";
+import Image from "next/image";
+import ThemeSwitcher from "../CommonComponents/ThemeSwitcher/ThemeSwitcher";
+import { useTheme } from "@/app/context/ThemeContext";
 
 export default function Navbar() {
+  
+  const { activeTheme, handleChange } = useTheme();
+
   return (
     <div className={`${styles.sticky_top}`}>
       <div className={`mx-2 ${styles.nav} ${styles.flex_props}`}>
-        <Link href="/" className={`${styles.nav_text} ${styles.no_dec}`}>
-          <div>Home</div>
+        <Link href="#">
+          <span>
+            <Image
+              src="/assets/logo/home.png"
+              alt="home"
+              width={48}
+              height={48}
+              className={styles.nav_logo}
+            />
+          </span>
         </Link>
-        <Link href="/About" className={`${styles.nav_text} ${styles.no_dec}`}>
-          <div>About</div>
-        </Link>
-        <Link href="/Work" className={`${styles.nav_text} ${styles.no_dec}`}>
-          <div>Work Experience</div>
-        </Link>
-        <Link href="/Project" className={`${styles.nav_text} ${styles.no_dec}`}>
-          <div>Projects</div>
+        <div>
+          <ThemeSwitcher
+            onChange={handleChange}
+            currentTheme={activeTheme}
+          />
+        </div>
+        <Link href="#project">
+          <span>
+            <Image
+              src="/assets/logo/project.gif"
+              alt="project"
+              width={48}
+              height={48}
+            />
+          </span>
         </Link>
       </div>
     </div>

@@ -1,56 +1,40 @@
-.center_div{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.left_div{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-}
-
-.flex_col{
-    flex-direction: column;
-}
-
-.roboto{
-    font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.roboto_bold{
-    font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.w_80pct{
+.container {
     width: 100%;
+    background-color: var(--main-color);
 }
 
-.pad_3rem{
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 2rem;
+    height: 100%;
+    width: 100%;
+    gap: 2rem;
+    height: 100%;
 }
 
-.left_margin{
-    margin-left: 0.5rem;
+.work_ex_header {
+    color: var(--text-color);
 }
 
-.bottom_margin{
-    margin-bottom: 1.5rem;
+
+
+.playfair_display_header {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 3rem;
 }
 
-.white_background{
-    background-color: #f6b45e;
+.playfair_display {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
 }
 
-@media(width < 450px) {
-    .bottom_margin {
-            margin-bottom: 8rem;
-        }
+.cards {
+    margin-top: 1rem;
+    width: 100%;
 }

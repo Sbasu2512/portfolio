@@ -2,18 +2,20 @@
     margin-left: 0.5rem;
 }
 
-.roboto{
-    font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
+.roboto {
+  font-family: "Playfair Display", serif;
   font-weight: 300;
   font-style: normal;
+  font-size: 16px;
+  line-height: 2rem;
 }
 
-.roboto_bold{
-    font-family: "Roboto Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: 700;
+.roboto_bold {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
   font-style: normal;
+  font-size: 16px;
+  line-height: 1.5rem;
 }
 
 /* d-flex flex-column w-100 */
