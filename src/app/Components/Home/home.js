@@ -8,44 +8,38 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-// const avatars = {
-//   purple: [{src:"assets/images/avatars/purple_av.png", width: 150}, {src:"/assets/images/kkr.svg", width:90}],
-//   light: "assets/images/avatars/light_av.png",
-//   dark: "assets/images/avatars/dark_av.png",
-// };
-
 const avatars = {
-  purple: "assets/images/avatars/purple_av.png",
-  light: "assets/images/avatars/light_av.png",
-  dark: "assets/images/avatars/dark_av.png",
+  purple: [{src:"assets/images/avatars/purple_av.png", index: 0}, {src:"assets/images/avatars/purple_av_2.png", index:1}],
+  light: [{src:"assets/images/avatars/light_av.png", index:0},{src:"assets/images/avatars/light_av_2.png", index:1}],
+  dark: [{src:"assets/images/avatars/dark_av.png", index:0},{src:"assets/images/avatars/dark_av_2.png", index:1}],
 };
 
-// const ROTATION_INTERVAL_MS =  60 * 1000;
+const ROTATION_INTERVAL_MS =  10 * 1000;
 
 export default function LandingPage({ theme, windowWidth }) {
   const avatarList = avatars[theme];
   const shouldHideContact = windowWidth < 500;
-  // const [index, setIndex] = useState(0);
-  // const [fade, setFade] = useState(true);
+  const [index, setIndex] = useState(0);
+  const [fade, setFade] = useState(true);
 
-  // useEffect(() => {
-  //   if (!Array.isArray(avatarList) || avatarList.length === 0) return;
+  useEffect(() => {
+    if (!Array.isArray(avatarList) || avatarList.length === 0) return;
 
-  //   const interval = setInterval(() => {
-  //     setFade(false);
+    const interval = setInterval(() => {
+      setFade(false);
 
-  //     setTimeout(() => {
-  //       setIndex((prev) => (prev + 1) % avatarList.length);
-  //       setFade(true);
-  //     }, 500);
-  //   }, ROTATION_INTERVAL_MS);
+      setTimeout(() => {
+        setIndex((prev) => (prev + 1) % avatarList.length);
+        setFade(true);
+      }, 500);
+    }, ROTATION_INTERVAL_MS);
 
-  //   return () => clearInterval(interval);
-  // }, [avatarList]);
+    return () => clearInterval(interval);
+  }, [avatarList]);
 
-  // useEffect(()=>{
-  //   setIndex(0);
-  // }, [theme])
+  useEffect(()=>{
+    setIndex(0);
+  }, [theme])
 
   return (
     <div className={styles.container} id="#">
@@ -54,9 +48,10 @@ export default function LandingPage({ theme, windowWidth }) {
           <div className={styles.circle}>
             <img
               src={
-                !Array.isArray(avatarList) ? avatarList : avatarList[index].src
+                avatarList[index].src
               }
-              className={styles.av_img}
+              className={avatarList[index].index === 0 ?styles.av_img:styles.av_img_2}
+              style={{opacity:fade? 1:0}}
             />
           </div>
         </div>
@@ -111,12 +106,14 @@ export default function LandingPage({ theme, windowWidth }) {
               </a>
             </div>
           </div>
-          {!shouldHideContact && <div className={styles.contact}>
+          {!shouldHideContact ? (<div className={styles.contact}>
             <div className={styles.contact_wrapper}>
-              <span>Get in Touch</span>
+              <span> <a href="mailto:sayantanworks@gmail.com" className={styles.text}>
+                    Get in touch
+                  </a></span>
               <FontAwesomeIcon icon={faArrowRight} />
             </div>
-          </div>}
+          </div>):null}
         </div>
       </div>
     </div>
