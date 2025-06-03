@@ -65,16 +65,9 @@
     color: var(--accent-color);
 }
 
-@media (min-width: 500px) and (max-width: 899px) {
-    .wrapper {
-        font-size: 10px;
-    }
-}
-
 @media(width < 450px) {
-
-    .wrapper {
-        font-size: 9px;
-
+    .footer {
+        flex-direction: column;
+        height: 7rem;
     }
 }

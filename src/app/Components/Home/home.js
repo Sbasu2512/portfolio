@@ -22,9 +22,9 @@ const avatars = {
 
 // const ROTATION_INTERVAL_MS =  60 * 1000;
 
-export default function LandingPage({ theme, windowWidth }) {
+export default function LandingPage({theme}) {
+
   const avatarList = avatars[theme];
-  const shouldHideContact = windowWidth < 500;
   // const [index, setIndex] = useState(0);
   // const [fade, setFade] = useState(true);
 
@@ -32,7 +32,7 @@ export default function LandingPage({ theme, windowWidth }) {
   //   if (!Array.isArray(avatarList) || avatarList.length === 0) return;
 
   //   const interval = setInterval(() => {
-  //     setFade(false);
+  //     setFade(false); 
 
   //     setTimeout(() => {
   //       setIndex((prev) => (prev + 1) % avatarList.length);
@@ -56,7 +56,20 @@ export default function LandingPage({ theme, windowWidth }) {
               src={
                 !Array.isArray(avatarList) ? avatarList : avatarList[index].src
               }
-              className={styles.av_img}
+              style={{
+                width: !Array.isArray(avatarList)
+                  ? 150
+                  : avatarList[index].width,
+                height: 160,
+                objectFit: "cover",
+                transition: "opacity 0.5s ease-in-out",
+                opacity: 1,
+                textAlign: "center",
+                color: "transparent",
+                textIndent: "10000px",
+                marginBottom: "0.4rem",
+                marginLeft: "0.5rem",
+              }}
             />
           </div>
         </div>
@@ -111,12 +124,12 @@ export default function LandingPage({ theme, windowWidth }) {
               </a>
             </div>
           </div>
-          {!shouldHideContact && <div className={styles.contact}>
+          <div className={styles.contact}>
             <div className={styles.contact_wrapper}>
               <span>Get in Touch</span>
               <FontAwesomeIcon icon={faArrowRight} />
             </div>
-          </div>}
+          </div>
         </div>
       </div>
     </div>
