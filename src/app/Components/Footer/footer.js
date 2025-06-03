@@ -12,9 +12,6 @@ const footerMessage = {
 export default function Footer({ visitors }) {
   return (
     <div className={styles.container}>
-      <div className={styles.visitor_container}>
-        <span className={styles.visitor_span}>visitors: {visitors}</span>
-      </div>
       <div className={`${styles.wrapper}`}>
         <div className={styles.flex_display}>
           <span className={styles.text_wrapper}>

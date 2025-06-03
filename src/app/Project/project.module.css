@@ -112,3 +112,18 @@
         box-shadow: -10px -10px 20px 5px var(--animation-color-third);
     }
 }
+
+@media (min-width: 300px) and (max-width: 499px) {
+    .animated_box {
+        justify-content: center;
+
+        .card_img {
+            width: 250px;
+        }
+    }
+    
+        .roboto_bold {
+            line-height: 1rem;
+            font-size: 10px;
+        }
+}
