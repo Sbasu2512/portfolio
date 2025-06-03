@@ -6,6 +6,7 @@ const picture = {
   purple: {src: "/assets/images/pictures/purple.jpg"},
   light: {src: "/assets/images/pictures/light_pic.jpg"},
   dark: {src: "/assets/images/pictures/dark_pic.jpg"},
+  red: {src: "/assets/images/pictures/dark_pic.jpg"},
 };
 
 

@@ -59,3 +59,14 @@ body {
   --animation-color-second: rgba(236, 193, 122, 0.4);
   --animation-color-third: rgba(236, 193, 122, 0.8);
 }
+
+/* red theme */
+.red {
+  --main-color:  #DA291C;
+  --accent-color: #ccab00;
+  --text-color: #000000;
+  --lighter-color: #F7DC6F;
+  --animation-color-first: rgba(242, 196, 100, 0.2);
+  --animation-color-second: rgba(242, 196, 100, 0.4);
+  --animation-color-third: rgba(242, 196, 100, 0.8);
+}
