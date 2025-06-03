@@ -10,7 +10,7 @@ import { useTheme } from "./context/ThemeContext";
 import { useEffect } from "react";
 
 export default function Home() {
-  const { activeTheme, handleVisitor, visitors } = useTheme();
+  const { activeTheme, handleVisitor, windowWidth } = useTheme();
 
   useEffect(()=>{
     handleVisitor();
@@ -18,11 +18,11 @@ export default function Home() {
 
   return (
     <main className={`${styles.container}`}>
-      <LandingPage theme={activeTheme} />
-      <Bio theme={activeTheme} />
+      <LandingPage theme={activeTheme} windowWidth={windowWidth} />
+      <Bio theme={activeTheme} windowWidth={windowWidth} />
       <Work />
       <Project />
-      <Footer visitors={visitors} />
+      <Footer />
     </main>
   );
 }

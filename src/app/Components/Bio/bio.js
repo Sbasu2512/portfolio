@@ -3,24 +3,24 @@ import React from "react";
 import styles from "./bio.module.css";
 
 const picture = {
-  purple: {src: "/assets/images/pictures/purple.jpg", width: '550px'},
-  light: {src: "/assets/images/pictures/light_pic.jpg", width:'400px'},
-  dark: {src: "/assets/images/pictures/dark_pic.jpg", width: '450px'},
+  purple: {src: "/assets/images/pictures/purple.jpg"},
+  light: {src: "/assets/images/pictures/light_pic.jpg"},
+  dark: {src: "/assets/images/pictures/dark_pic.jpg"},
 };
 
 
-export default function Bio({theme}) {
+export default function Bio({ theme, windowWidth }) {
+  const hideImage = windowWidth < 901;
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.image_container}>
-          <div className={styles.image}>
-            <img
-              src={picture[theme].src}
-              style={{ width: picture[theme].width, height: "100%" }}
-            />
+        {!hideImage && (
+          <div className={styles.image_container}>
+            <div className={styles.image_wrapper}>
+              <img className={styles.image} src={picture[theme].src} />
+            </div>
           </div>
-        </div>
+        )}
         <div className={styles.bio_container}>
           <h1 className={styles.playfair_display_header}>About Me!</h1>
           <span className={styles.bio_span}>
@@ -65,14 +65,14 @@ export default function Bio({theme}) {
                 my day-to-day development.
               </p>
 
-              <h2>⚽ Outside the Code</h2>
+              <h2 className={styles.playfair_display_header}>⚽ Outside the Code</h2>
               <p>
                 When I&apos;m not coding, you&apos;ll find me on the football
                 field, catching up on matches (huge Manchester United and KKR
                 fan!), exploring new places, or lost in a good book.
               </p>
 
-              <h2>🚀 Let&apos;s Collaborate</h2>
+              <h2 className={styles.playfair_display_header}>🚀 Let&apos;s Collaborate</h2>
               <p>
                 I love turning ideas into intuitive, functional software.
                 Whether you&apos;re building something new or refining a
