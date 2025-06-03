@@ -6,10 +6,10 @@ import { useTheme } from "@/app/context/ThemeContext";
 const footerMessage = {
   web: "&copy; 2022 All rights reserved. Designed and developed with care.",
   tab: "&copy; 2022 All rights reserved. Crafted with dedication and professionalism.",
-  phone: "&copy; 2022 All rights reserved.",
+  phone: "&copy; 2022 All rights reserved. Sayantan Basu",
 };
 
-export default function Footer({ visitors }) {
+export default function Footer() {
   return (
     <div className={styles.container}>
       <div className={`${styles.wrapper}`}>

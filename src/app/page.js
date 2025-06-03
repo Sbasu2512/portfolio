@@ -22,7 +22,7 @@ export default function Home() {
       <Bio theme={activeTheme} windowWidth={windowWidth} />
       <Work />
       <Project />
-      <Footer visitors={visitors} />
+      <Footer />
     </main>
   );
 }
