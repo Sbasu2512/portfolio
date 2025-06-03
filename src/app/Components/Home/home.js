@@ -22,10 +22,6 @@ export default function LandingPage({ theme, windowWidth }) {
   const shouldHideContact = windowWidth < 500;
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
-
-  useEffect(() => {
-    if (!Array.isArray(avatarList) || avatarList.length === 0) return;
-
     const interval = setInterval(() => {
       setFade(false);
 

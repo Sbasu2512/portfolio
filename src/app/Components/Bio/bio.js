@@ -23,11 +23,11 @@ export default function Bio({ theme, windowWidth }) {
           </div>
         )}
         <div className={styles.bio_container}>
-          <h1 className={styles.playfair_display_header}>About Me!</h1>
+          <h1 className={styles.playfair_display_header}>👋 About Me!</h1>
           <span className={styles.bio_span}>
             <section className={styles.playfair_display}>
               <p>
-                👋 Hey there! I&apos;m a Senior Software Engineer
+                Hey there! I&apos;m a Senior Software Engineer
                 <strong> Based in Chennai | Originally from Kolkata</strong>
               </p>
 
