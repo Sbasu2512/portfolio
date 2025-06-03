@@ -7,21 +7,7 @@
             "end_date": "Present",
             "position": "Senior Software Engineer",
             "client": "Logitech Pvt Ltd",
-            "responsibilities": [
-                "Developed reusable UI components and containers using React.js, Redux, and SCSS.",
-                "Wrote extensive unit and acceptance tests to ensure code reliability.",
-                "Demonstrated strong ownership in writing understandable, maintainable, and reusable software.",
-                "Aligned with product goals to deliver optimal user experiences.",
-                "Leveraged strong CS fundamentals, including algorithms, data structures, and systems design.",
-                "Applied strong JavaScript fundamentals such as closures, hoisting, callbacks, and variable scoping.",
-                "Gained excellent understanding of the JavaScript event loop.",
-                "Created robust CSS layouts using legacy and modern techniques like Flexbox and CSS Grid.",
-                "Designed and implemented CSS animations with hands-on experience in theming and accessibility.",
-                "Deep understanding of the React ecosystem, including data management, middleware, rendering, and UI component testing.",
-                "Enhanced application performance through optimization techniques and performance metrics tools.",
-                "Utilized memorization and debouncing techniques for efficient coding.",
-                "Proficient in source control systems like Git and GitHub."
-            ]
+            "responsibilities": "adept at building reusable UI components using React.js, Redux, and SCSS, with a strong focus on code reliability through extensive unit and acceptance testing. Proficient in JavaScript fundamentals, modern CSS layouts (Flexbox, Grid), and animations, consistently delivering optimized user experiences aligned with product goals. Demonstrates strong ownership, leveraging robust CS fundamentals and version control (Git/GitHub) to produce understandable, maintainable, and high-performing software."
         },
         {
             "company_name": "NexSemi System Pvt Ltd",
@@ -30,22 +16,7 @@
             "end_date": "Oct 2024",
             "position": "Senior Software Engineer",
             "client": "Atonarp Inc",
-            "responsibilities": [
-                "Developed the application with scrum methodology and involved in daily standup, sprint planning, sprint reviews and merge request reviews.",
-                "Developed production level front-end and back-end code using JSX, SASS, Material UI, JavaScript and NextJs with NPM package management system.",
-                "Worked on all stages of the software development lifecycle, including design, development, implementation, and testing.",
-                "Worked on implementing a notification system, system dashboard with important data, auto logout feature, inactive logout feature etc.",
-                "Implemented print feature with chart js for session reports.",
-                "Worked on various ReactJs hooks such as useContext, useCallback, useMemo, along with useState and useEffect.",
-                "Implemented data chunking and optimized the process so that user can upload larger files with no application failure or latency.",
-                "Implemented powershell scripts to automate the software installations for our application.",
-                "Implemented REST APIs for NextJs back-end and called them from the front end.",
-                "Implemented features on in python API service and used gRPC to connect it to NextJs back-end.",
-                "Worked on user management system and error handling on the application.",
-                "Worked with QA team to debug and write tests.",
-                "Wrote sprint test cases on every sprint end as well as helped in deployment, sanity testing etc.",
-                "Used JIRA to track various tasks and GitLab for code collaboration."
-            ]
+            "responsibilities": "Experienced in agile (Scrum) environments, contributing to all SDLC phases. Developed production-level front-end (JSX, SASS, Material UI, React.js hooks, Next.js) and back-end (Next.js, Python, REST APIs, gRPC) code. Key contributions include implementing notification systems, dashboards, large file upload optimization, and automation scripts. Proficient in user management, error handling, and collaborating with QA for debugging and testing. Utilized JIRA for task tracking and GitLab for version control, actively participating in sprint planning, reviews, and deployments."
         },
         {
             "company_name": "Charger Logistics",
@@ -53,25 +24,7 @@
             "location": "Brampton, ON",
             "start_date": "Dec 2022",
             "end_date": "Aug 2023",
-            "responsibilities": [
-                "Developed the application with Scrum methodology and involved in daily Stand-Up, Backlog Grooming Meetings, Planning, Tasking, Sprint Reviews, and Retrospective Sessions.",
-                "Developed production-level front-end markup and code from Figma design or requirement documents using HTML5, SASS, Ignite UI, TypeScript, and Angular 12 with NPM package Management System.",
-                "Worked on all stages of the software development lifecycle, including design, development, implementation, and testing.",
-                "Worked on Implementing functions and features using Angular 12, TypeScript, HTML5, SASS and Ignite UI.",
-                "Developed the components using Angular 12 needed for the application from the scratch and customizing from various Angular related libraries to meet the application's functionality.",
-                "Extensive use of Ignite UI framework to achieve RWD, i.e., make the portal compatible for various screen resolutions which are trending in the market today.",
-                "Extensively worked on refactoring the existing code base from Angular 12 to Angular 16.",
-                "Performed form validations using reactive forms and inputting ticket rising information from Angular 12 framework.",
-                "Developed front end pages for user interactions; for the entire website using HTML5, SASS, Ignite UI, TypeScript, Angular 12 and JSON.",
-                "Worked on MVC architecture of Framework for developing web applications and to simplify the code complexity.",
-                "Involved in developing UI pages using (Angular 12) calling the Rest API from Backend.",
-                "Implemented Angular 12 services to connect the web application to back-end APIs to POST/GET the data used in the application.",
-                "Worked on Maven for Build automation, GIT for Version Control to track check-ins and rollback code.",
-                "Worked with Cypress, supporting QA team to debug and write tests.",
-                "Developed end to end application with agile methodology.",
-                "Created custom directives with Angular 12.",
-                "Worked on RxJs library for state management."
-            ]
+            "responsibilities": "Developed production front-end applications using Angular 12 (upgraded to 16), TypeScript, HTML5, SASS, and Ignite UI within an Agile/Scrum framework. Created and customized Angular components, implemented features, and ensured responsive web design (RWD). Managed the full development lifecycle (design, development, testing, implementation). Integrated with back-end REST APIs using Angular services for data exchange (POST/GET) and implemented form validations. Utilized MVC architecture, RxJS for state management, and created custom directives. Supported build automation (Maven), version control (Git), and QA testing (Cypress)."
         },
         {
             "company_name": "ShipHaul Logistics",
@@ -79,17 +32,7 @@
             "location": "Montreal, QC, CA",
             "start_date": "Sep 2021",
             "end_date": "Feb 2022",
-            "responsibilities": [
-                "Involved in Analysis, Design and Development requirements of applications developed using AGILE SCRUM methodology.",
-                "Developed User Interface Applications and Testing and documentation of web-based applications using Google Firebase Services, HTML5, CSS, JavaScript, TypeScript, NodeJS, Redux and ReactJS.",
-                "Implemented the application using the concrete principles laid down by several design patterns.",
-                "Developed backend applications using TypeScript, Google Firebase services, Google cloud platform following a model view controller (MVC) architecture.",
-                "Utilized React Redux saga for global state management.",
-                "Involved in bug fixes, analyzing and improving overall application performance.",
-                "Worked with a team of developers and researchers to develop an intelligent freight logistics platform.",
-                "Experienced working on the integrations of real-time artificial intelligence systems, IoT systems, and different external API services.",
-                "Utilized JIRA to track and address production issues. BitBucket was used as a source control tool."
-            ]
+            "responsibilities": "Developed full-stack web applications using Agile/Scrum methodology. Built responsive UI with ReactJS, Redux, TypeScript, HTML5, and CSS. Created backend services using TypeScript, Google Firebase, and Google Cloud Platform (GCP) following MVC architecture. Implemented design patterns, managed state with Redux Saga, and integrated real-time AI, IoT systems, and external APIs. Performed testing, documentation, bug fixes, and performance optimization. Collaborated on an intelligent freight logistics platform. Used JIRA for issue tracking and BitBucket for version control."
         },
         {
             "company_name": "Resolve Six",
@@ -97,25 +40,7 @@
             "location": "Mississauga, ON, CA",
             "start_date": "Jan 2021",
             "end_date": "Mar 2021",
-            "responsibilities": [
-                "Utilized Junit and Selenium WebDriver, developed Test Scripts to incorporate Test Cases, Test Scenarios, and features for BDD (Behaviour Driven Development) in Gherkins format.",
-                "Knowledge of Selenium WebDriver, Java, and the TestNG Framework for automating regression test cases.",
-                "Engaged in Sprint preparation, Review sessions, and regular Scrum meetings, as well as developing Test scenarios, Test cases, Test results, and Test reports.",
-                "Participated in regular stand-up calls and Agile Methodology two-week Sprints.",
-                "Utilized Selenium WebDriver and TestNG to perform parallel and cross-browser testing on various browsers such as Internet Explorer, Chrome, and Firefox, where several tests were run at the same time.",
-                "Utilized page factory to operate on the Data Driven/Page Object Model Framework, extracting data from external Excel files using Apache POI and loading it into variables in the scripted code.",
-                "Utilized Explicit and Implicit waits in Selenium Synchronization to ensure that the pages were loaded correctly.",
-                "TakeScreenshotAs is used to capture application screenshots, which are then copied if an exception occurs or at any checkpoint during execution.",
-                "Worked on Maven for build and dependency management where I have added different dependencies such as Apache poi/TestNG/Maven-plugin-API etc.",
-                "According to the requirement, established connectivity between the Java Programming language and a wide range of databases using JDBC.",
-                "Responsible for developing the scripts to support Jenkins (Continuous Integration) of the scripts with the build server.",
-                "Used GitHub to maintain and manage the build scripts, test data used, and other documents related to the project.",
-                "Used JIRA as a defect tracking tool and for project management.",
-                "Performed functional testing of web services using SOAPUI and RESTful web services.",
-                "Performed Cross Browser and parallel testing to test the applications are working as desired in different browsers and environments.",
-                "Verified the integration of various components in the application and executed end-to-end testing.",
-                "Participated in Release Review/Requirement Analysis and Design review meetings."
-            ]
+            "responsibilities": "Developed automated test scripts using Selenium WebDriver, Java, TestNG, and JUnit in Agile/Scrum environments. Implemented BDD framework with Gherkin, created test cases/scenarios, and executed cross-browser/parallel testing. Utilized Page Object Model and Data-Driven frameworks with Apache POI for Excel data. Managed synchronization via explicit/implicit waits and captured screenshots for failures. Conducted functional testing of SOAP/REST APIs and end-to-end integration testing. Configured Jenkins CI pipelines and managed code via GitHub. Used JIRA for defect tracking and participated in sprint planning/reviews. Managed dependencies with Maven and performed database validation via JDBC."
         },
         {
             "company_name": "Tech Electric Automation Inc.",
@@ -123,12 +48,7 @@
             "location": "Burlington, ON, CA",
             "start_date": "Nov 2018",
             "end_date": "Oct 2019",
-            "responsibilities": [
-                "Communicate with the managing director and keep him informed of any developments. Procure parts as directed by the technical team and do thorough market research for competitive alternatives. If necessary, negotiate with suppliers to obtain the most cost-effective prices and terms, and double-check any correspondence with suppliers. Keep a positive working relationship with other supplier partners.",
-                "Manage a highly trained group of technicians' schedules. Once a job is completed, hand it over to the customer and make sure they are happy. After each job, make sure the documentation between accounting and the field team is completed.",
-                "Work on the draft sight to generate drawings and have them approved. Make appointments with the ESA for inspections. Manage and open purchase orders and work orders. As needed, prepare maintenance manuals and communications.",
-                "Using Project Management software, create a Work Breakdown Structure (WBS) and set daily targets to ensure that the project stays on track."
-            ]
+            "responsibilities": "Managed procurement, including market research, supplier negotiation, and relationship management. Scheduled and supervised a team of technicians, ensuring customer satisfaction and documentation completion post-job. Created technical drawings using DraftSight and coordinated ESA inspections. Managed purchase orders, work orders, and prepared maintenance manuals. Utilized Project Management software to develop Work Breakdown Structures (WBS) and set daily targets for project tracking."
         },
         {
             "company_name": "Walmart Canada Corporation",
@@ -136,11 +56,7 @@
             "location": "Burlington, ON, CA",
             "start_date": "May 2018",
             "end_date": "July 2019",
-            "responsibilities": [
-                "Responding to CSM pages on the mike and assigning cashiers to registers including co-ordinating the break schedules for Cashiers & Courtesy Desk Associates. Train Cashiers & Courtesy Desk Associates to all new programs.",
-                "Communicating with management and sales floor associates to maintain Front-End coverage & resolving customer dispute/concerns and using good judgment to make decisions for the customer at the cash register and at the customer service desk.",
-                "Lead and motivated the front-end team to effectively maintain the target sales rates of 5% of the Wal-Mart Rewards MasterCard while promoting good public relations."
-            ]
+            "responsibilities": "Led front-end operations, responding to CSM calls to assign cashiers to registers and manage break schedules. Trained Cashiers and Courtesy Desk Associates on new programs. Coordinated with management and sales floor to ensure adequate coverage. Resolved customer disputes and concerns at registers and service desks, making sound judgment calls. Motivated the team to achieve a 5% sales target for Walmart Rewards MasterCard applications while promoting positive public relations."
         },
         {
             "company_name": "GSE-R-US",
@@ -148,12 +64,7 @@
             "location": "Mississauga, ON, CA",
             "start_date": "July 2018",
             "end_date": "Oct 2018",
-            "responsibilities": [
-                "Report to the MD and keep him updated on any development with production or parts. Helping accounting department with Payroll. Procure parts as directed by technical team and survey the markets efficiently for competitive substitutes. Negotiate with suppliers to get the most economical prices & conditions as well as check all correspondences with suppliers. Maintain a good business relationship with them. Generate new leads on parts and shipping partners.",
-                "Facilitate the shipping of products from one destination to another. Arrange transportation and orchestrate deliveries to meet customer demand with little to no delay. Prepares loads for shipment and draw up the appropriate paperwork for customs. Manages activities throughout the transportation cycle to make sure established deadlines are met. Keep the customer updated on their shipment.",
-                "Reduced the part purchase cost by 15% by properly negotiating with new vendors and creating relationships.",
-                "Reduced the logistics cost by 15% by properly negotiating with new vendors."
-            ]
+            "responsibilities": "Managed procurement by sourcing parts, conducting market research, and negotiating with suppliers to secure cost-effective terms (achieving 15% cost reduction). Facilitated global logistics, arranging transportation, customs documentation, and timely deliveries while maintaining customer shipment updates. Reported directly to the MD on production/parts status. Generated new leads for parts and shipping partners, nurtured supplier relationships, and assisted accounting with payroll."
         }
     ],
     "education": [

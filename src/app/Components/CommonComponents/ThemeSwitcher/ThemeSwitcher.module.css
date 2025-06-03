@@ -62,6 +62,15 @@
     margin: 6px;
 }
 
+.red {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    color: #000000;
+    margin: 6px;
+}
+
 .flex{
     display: flex;
     gap: 2rem;
@@ -90,7 +99,12 @@
 
 .text_dark {
     background-color: #290606;
-        color: #e6a6a6;
+    color: #e6a6a6;
+}
+
+.text_red {
+    background-color: #DA291C;
+    color: #000000;
 }
 
 .menu_dropdown .text_dark:hover {

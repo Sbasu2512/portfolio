@@ -52,9 +52,7 @@ export default function CommonCard(props) {
 
           <div className={`mt-3 ${styles.roboto}`}>
             <ul>
-              {responsibilities.map((res, i) => (
-                <li key={i}>{res}</li>
-              ))}
+              {responsibilities}
             </ul>
           </div>
         </CardContent>
