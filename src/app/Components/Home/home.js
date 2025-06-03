@@ -22,6 +22,8 @@ export default function LandingPage({ theme, windowWidth }) {
   const shouldHideContact = windowWidth < 500;
   const [index, setIndex] = useState(0);
   const [fade, setFade] = useState(true);
+   
+  useEffect(()=>{
     const interval = setInterval(() => {
       setFade(false);
 
@@ -32,7 +34,7 @@ export default function LandingPage({ theme, windowWidth }) {
     }, ROTATION_INTERVAL_MS);
 
     return () => clearInterval(interval);
-  }, [avatarList]);
+  },[avatarList])
 
   useEffect(()=>{
     setIndex(0);
