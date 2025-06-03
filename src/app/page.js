@@ -10,7 +10,7 @@ import { useTheme } from "./context/ThemeContext";
 import { useEffect } from "react";
 
 export default function Home() {
-  const { activeTheme, handleVisitor, visitors, windowWidth } = useTheme();
+  const { activeTheme, handleVisitor, windowWidth } = useTheme();
 
   useEffect(()=>{
     handleVisitor();
