@@ -58,6 +58,13 @@
     font-size: 3rem;
 }
 
+.playfair_display_header_2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 2rem;
+}
+
 .playfair_display {
     font-family: "Playfair Display", serif;
     font-weight: 500;
