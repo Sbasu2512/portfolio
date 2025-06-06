@@ -66,14 +66,14 @@ export default function Bio({ theme, windowWidth }) {
                 my day-to-day development.
               </p>
 
-              <h2 className={styles.playfair_display_header}>⚽ Outside the Code</h2>
+              <h2 className={styles.playfair_display_header_2}>⚽ Outside the Code</h2>
               <p>
                 When I&apos;m not coding, you&apos;ll find me on the football
                 field, catching up on matches (huge Manchester United and KKR
                 fan!), exploring new places, or lost in a good book.
               </p>
 
-              <h2 className={styles.playfair_display_header}>🚀 Let&apos;s Collaborate</h2>
+              <h2 className={styles.playfair_display_header_2}>🚀 Let&apos;s Collaborate</h2>
               <p>
                 I love turning ideas into intuitive, functional software.
                 Whether you&apos;re building something new or refining a
