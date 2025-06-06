@@ -1,7 +1,6 @@
 import Navbar from "./Components/NavBar/nav";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Analytics } from "@vercel/analytics/react";
 import "./global.css"
 import { ThemeProvider } from "./context/ThemeContext";

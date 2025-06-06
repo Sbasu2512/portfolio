@@ -1,0 +1,9 @@
+.card {
+    width: 100%;
+    z-index: 0;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+}

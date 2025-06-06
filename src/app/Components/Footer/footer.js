@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './footer.module.css';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import { useTheme } from "@/app/context/ThemeContext";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const footerMessage = {
   web: "&copy; 2022 All rights reserved. Designed and developed with care.",
@@ -18,7 +18,7 @@ export default function Footer() {
             Made with{" "}
             <span className={`${styles.red}`}>
               {" "}
-              <FavoriteIcon />{" "}
+              <FontAwesomeIcon icon={faHeart} />
             </span>{" "}
             By Sayantan{" "}
           </span>

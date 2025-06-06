@@ -58,6 +58,8 @@
     color: var(--animation-color-third);
     height: 24px;
     margin-top: -8px;
+    margin-left: 0.3rem;
+    margin-right: 0.35rem;
 }
 
 .small_icon {
