@@ -1,10 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./work.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBriefcase } from "@fortawesome/free-solid-svg-icons";
-import CommonCard from "../Components/CommonComponents/Card/card";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
+import WorkCard from "../Components/CommonComponents/WorkCard/WorkCard";
 import info from "../../../info.json";
 import EducationCard from "../Components/CommonComponents/EducationCard/educationCard";
 
@@ -24,7 +21,7 @@ export default function Work() {
           {jobDetails &&
             jobDetails.map((detail, i) => (
               <div key={i} className={styles.cards}>
-                <CommonCard work_details={detail} />
+                <WorkCard work_details={detail} />
               </div>
             ))}
         </div>
