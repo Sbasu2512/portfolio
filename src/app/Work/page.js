@@ -17,7 +17,7 @@ export default function Work() {
             <span>Work Experience</span>
           </h1>
         </div>
-        <div>
+        <div className={styles.work_ex_padding}>
           {jobDetails &&
             jobDetails.map((detail, i) => (
               <div key={i} className={styles.cards}>
@@ -30,7 +30,8 @@ export default function Work() {
             <h1 className={`${styles.playfair_display_header} `}>Education</h1>
           </span>
         </div>
-        <div className={styles.cards}>
+        <div className={`${styles.cards} ${styles.work_ex_padding}`}
+        >
           {educationDetails &&
             educationDetails.map((detail, i) => (
               <div key={i} className={styles.cards}>

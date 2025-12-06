@@ -217,6 +217,10 @@
     .socials_container {
         gap: 10rem;
     }
+
+    .playfair_display{
+        margin-bottom: 4rem;
+    }
 }
 
 @media (min-width: 1024px) and (max-width: 1499px) {
