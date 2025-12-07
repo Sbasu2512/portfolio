@@ -11,17 +11,9 @@ const picture = {
 
 
 export default function Bio({ theme, windowWidth }) {
-  const hideImage = windowWidth < 901;
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
-        {!hideImage && (
-          <div className={styles.image_container}>
-            <div className={styles.image_wrapper}>
-              <img className={styles.image} src={picture[theme].src} />
-            </div>
-          </div>
-        )}
         <div className={styles.bio_container}>
           <h1 className={styles.playfair_display_header}>👋 About Me!</h1>
           <span className={styles.bio_span}>
