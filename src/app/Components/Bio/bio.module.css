@@ -7,22 +7,21 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    margin: 5rem;
-    padding: 2rem;
+    padding: 0;
     height: 100%;
-    width: 89%;
+    width: 100%;
+    flex-wrap: wrap;
     gap: 10rem;
-    height: 100%;
 }
 
 .bio_container {
-    /* width: 89%; */
+    width: 80%;
     display: flex;
     flex-direction: column;
     background-color: var(--accent-color);
     color: var(--text-color);
     padding: 2rem;
-    margin-left: 5rem;
+    margin: 0 auto;
 }
 
 .image_container {
@@ -75,7 +74,6 @@
 
 @media (min-width: 1600px) and (max-width: 1900px) {
     .wrapper {
-        margin: 3rem;
         gap: 0rem;
     }
 
@@ -104,7 +102,7 @@
 
 @media (min-width: 1500px) and (max-width: 1899px) {
     .wrapper {
-        margin: 3rem;
+       
         gap: 0rem;
     }
 
@@ -133,7 +131,7 @@
 
 @media (min-width: 1024px) and (max-width: 1499px) {
     .wrapper {
-        margin: 3rem;
+        
         gap: 0rem;
     }
 
@@ -162,7 +160,7 @@
 
 @media (min-width: 931px) and (max-width: 1023px) {
     .wrapper {
-        margin: 3rem;
+       
         gap: 0rem;
     }
 
@@ -177,7 +175,7 @@
 
     .bio_container {
         padding: 1.5em;
-        width: 100%;
+        width: 80%;
     }
 
     .bio_span {
@@ -187,7 +185,7 @@
 
 @media (min-width: 500px) and (max-width: 930px) {
     .wrapper {
-        margin: 2rem;
+       
         gap: 0rem;
     }
 
@@ -202,7 +200,7 @@
 
     .bio_container {
         padding: 1.5em;
-        width: 100%;
+        width: 80%;
     }
 
     .bio_span {
@@ -212,7 +210,7 @@
 
 @media (min-width: 300px) and (max-width: 499px) {
     .wrapper {
-        margin: 2rem;
+        
         gap: 0rem;
     }
 
@@ -227,7 +225,7 @@
 
     .bio_container {
         padding: 1.5em;
-        width: 100%;
+        width: 80%;
     }
 
     .bio_span {
