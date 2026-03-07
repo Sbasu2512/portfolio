@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styles from './project.module.css';
+import ProjectCard from "./ProjectCard/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFileCode, faCode } from "@fortawesome/free-solid-svg-icons";
 import info from '../../../info.json';
@@ -9,7 +10,6 @@ export default function Project(props) {
 
     const [projectDetails, setProjectDetails] = useState(info.projects);
     const [skills, setSkills] = useState(info.skills);
-    
 
     return (
       <div className={`${styles.container}`} id="project">
@@ -22,13 +22,7 @@ export default function Project(props) {
           <div className={styles.collage}>
             {projectDetails &&
               projectDetails.map((deets, i) => (
-                <div key={i} className={styles.animated_box}>
-                  <img
-                    src={deets.image_url}
-                    alt={deets.project_name}
-                    className={`${styles.card_img}`}
-                  />
-                </div>
+                <ProjectCard key={i} project={deets} />
               ))}
           </div>
         </div>

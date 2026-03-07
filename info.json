@@ -95,49 +95,44 @@
     ],
     "projects": [
         {
-            "project_name": "BlogPostApp",
-            "tech_stack": "",
-            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/BlogPostApp"
-        },
-        {
             "project_name": "Lotide",
             "tech_stack": "JavaScript",
             "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a clone of lodash JavaScript library to practice various types of functions using JavaScript.",
-            "repo_link": "",
-            "live_link": "",
-            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/lotide"
+            "repo_link": "https://github.com/Sbasu2512/lotide",
+            "live_link": "https://www.npmjs.com/package/@sayantan2512/lotide",
+            "image_url": "/assets/images/repo_images/lotide.png"
         },
         {
             "project_name": "TinyApp",
             "tech_stack": "HTML, CSS, AJAX, Express JS, Node JS",
             "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a full-stack web app built with an HTTP Server that handles requests from the browser (client). Along the way we got introduced to some more advanced JavaScript and Node concepts, and we also learnt more about Express JS.",
-            "repo_link": "",
-            "live_link": "",
-            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/tinyapp"
+            "repo_link": null,
+            "live_link": "https://tiny-app-s92i.onrender.com/login",
+            "image_url": "/assets/images/repo_images/tinyapp.png"
         },
         {
             "project_name": "Tweeter",
             "tech_stack": "HTML, CSS, JS, jQuery, Ajax",
             "description": "It is a single page twitter clone built with HTML, CSS, JS, jQuery and Ajax.",
-            "repo_link": "",
-            "live_link": "",
-            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/tweeter"
+            "repo_link": null,
+            "live_link": "https://tweeter-bgdk.onrender.com",
+            "image_url": "/assets/images/repo_images/tweeter.png"
         },
         {
             "project_name": "Interview Scheduler",
             "tech_stack": "React, R-spec, Cypress, Storybook, Axios",
             "description": "It is a React application that allows users to book and cancel interviews. In this project, there is a combination of concise API with a WebSocket server to build a real-time experience. Testing was done using R-spec and Cypress. We learnt about React Hooks through this project and implementing REST API with axios.",
-            "repo_link": "",
-            "live_link": "",
-            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/Interview-Scheduler"
+            "repo_link": "https://github.com/Sbasu2512/Interview-Scheduler",
+            "live_link": null,
+            "image_url": "/assets/images/repo_images/Interview-Scheduler.png"
         },
         {
             "project_name": "Jungle",
             "tech_stack": "Ruby on Rails, HTML, CSS, JavaScript, jQuery",
             "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a mini ecommerce website built with Ruby with Rails for the purposes of learning Rails 4.2 by example.",
-            "repo_link": "",
-            "live_link": "",
-            "image_url": "https://opengraph.githubassets.com/d61026dec567dd7b1063ec770fa16685a15f3c46daade8328ecbda2278491d200316c797498ebb570c5d51f9df68e166d0b79e533012ae958d16a69f8de1b11d/Sbasu2512/jungle-rails"
+            "repo_link": "https://github.com/Sbasu2512/jungle-rails",
+            "live_link": null,
+            "image_url": "/assets/images/repo_images/jungle-rails.png"
         }
     ],
     "skills": [
