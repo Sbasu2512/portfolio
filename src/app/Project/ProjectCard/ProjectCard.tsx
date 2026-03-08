@@ -1,22 +1,21 @@
-import styles from "./ProjectCard.module.css";
+import styles from './ProjectCard.module.css';
+import type { Project } from '@/types/portfolio';
 
-export default function ProjectCard({ project }) {
+type ProjectCardProps = {
+  project: Project;
+};
+
+export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className={styles.card}>
-      <img
-        src={project.image_url}
-        alt={project.project_name}
-        className={styles.image}
-      />
+      <img src={project.image_url} alt={project.project_name} className={styles.image} />
 
       <div className={styles.overlay}>
         <h3>{project.project_name}</h3>
 
         <p className={styles.stack}>{project.tech_stack}</p>
 
-        <p className={styles.description}>
-          {project.description}
-        </p>
+        <p className={styles.description}>{project.description}</p>
 
         <div className={styles.buttons}>
           {project.live_link && (

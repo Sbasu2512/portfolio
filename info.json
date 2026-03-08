@@ -133,6 +133,14 @@
             "repo_link": "https://github.com/Sbasu2512/jungle-rails",
             "live_link": null,
             "image_url": "/assets/images/repo_images/jungle-rails.png"
+        },
+        {
+            "project_name": "Goal Predictor",
+            "tech_stack": "FastAPI, python, React",
+            "description": "This project contains my own trained model which is being used to predict the goals that a player might score.",
+            "repo_link": "https://github.com/Sbasu2512/goals_predictor",
+            "live_link": "https://goal-prediction-app.onrender.com",
+            "image_url": "/assets/images/repo_images/goals_predictor.png"
         }
     ],
     "skills": [
