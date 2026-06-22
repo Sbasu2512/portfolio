@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 
-type Theme = 'purple' | 'light' | 'dark' | 'red';
+type Theme = 'purple' | 'light' | 'dark' | 'glass';
 
 type ThemeContextValue = {
   activeTheme: Theme;

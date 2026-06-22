@@ -22,7 +22,7 @@ const avatars: Record<Theme, AvatarItem[]> = {
   purple: [{ src: 'assets/images/avatars/purple_av.png', index: 0 }, { src: 'assets/images/avatars/purple_av_2.png', index: 1 }],
   light: [{ src: 'assets/images/avatars/light_av.png', index: 0 }, { src: 'assets/images/avatars/light_av_2.png', index: 1 }],
   dark: [{ src: 'assets/images/avatars/dark_av.png', index: 0 }, { src: 'assets/images/avatars/dark_av_2.png', index: 1 }],
-  red: [{ src: 'assets/images/avatars/dark_av.png', index: 0 }, { src: 'assets/images/avatars/dark_av_2.png', index: 1 }]
+  glass: [{ src: 'assets/images/avatars/dark_av.png', index: 0 }, { src: 'assets/images/avatars/dark_av_2.png', index: 1 }]
 };
 
 const ROTATION_INTERVAL_MS = 10 * 1000;
@@ -49,18 +49,17 @@ export default function LandingPage({ theme, windowWidth }: LandingPageProps) {
   useEffect(() => {
     setIndex(0);
   }, [theme]);
-
   return (
     <div className={styles.container} id="#">
       <div className={styles.wrapper}>
         <div className={styles.avatar}>
           <div className={styles.circle}>
-            <img
+            {<img
               src={avatarList[index].src}
               className={avatarList[index].index === 0 ? styles.av_img : styles.av_img_2}
               style={{ opacity: fade ? 1 : 0 }}
               alt="Avatar"
-            />
+            />}
           </div>
         </div>
         <div className={styles.accent}>

@@ -1,0 +1,155 @@
+
+/* ── Base glass surface ─────────────────────────────────── */
+.panel {
+  position: relative;
+  background: var(--glass-bg, var(--accent-color));
+  backdrop-filter: var(--glass-blur, none);
+  -webkit-backdrop-filter: var(--glass-blur, none);
+  border: 1px solid var(--glass-border, transparent);
+  border-radius: var(--glass-radius, 8px);
+  box-shadow: var(--glass-shadow, 0 4px 16px rgba(0,0,0,0.2));
+  color: var(--text-color);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  overflow: hidden;
+}
+
+/* Inner specular shine strip */
+.panel::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--glass-shine, none);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.panel:hover {
+  background: var(--glass-bg-hover, var(--lighter-color));
+  border-color: var(--glass-border-hover, var(--lighter-color));
+  box-shadow: var(--glass-shadow-hover, 0 8px 32px rgba(0,0,0,0.3));
+  transform: translateY(-2px);
+}
+
+/* ── Card — slightly elevated panel ─────────────────────── */
+.card {
+  composes: panel;
+  padding: 1.75rem 2rem;
+}
+
+/* ── Pill / badge ───────────────────────────────────────── */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3em 0.9em;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  background: var(--glass-bg, var(--accent-color));
+  backdrop-filter: var(--glass-blur, none);
+  -webkit-backdrop-filter: var(--glass-blur, none);
+  border: 1px solid var(--glass-border, transparent);
+  color: var(--text-color);
+  transition: background 0.25s, border-color 0.25s;
+}
+
+.pill:hover {
+  background: var(--glass-bg-hover, var(--lighter-color));
+  border-color: var(--glass-border-hover, var(--lighter-color));
+}
+
+/* ── Button ─────────────────────────────────────────────── */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.65em 1.4em;
+  border: 1px solid var(--glass-border, var(--lighter-color));
+  border-radius: 8px;
+  background: var(--glass-bg, rgba(255,255,255,0.1));
+  backdrop-filter: var(--glass-blur, none);
+  -webkit-backdrop-filter: var(--glass-blur, none);
+  color: var(--text-color);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: var(--glass-shadow, 0 2px 8px rgba(0,0,0,0.15));
+  position: relative;
+  overflow: hidden;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--glass-shine, none);
+  pointer-events: none;
+}
+
+.button:hover {
+  background: var(--glass-bg-hover, rgba(255,255,255,0.18));
+  border-color: var(--glass-border-hover, var(--lighter-color));
+  box-shadow: var(--glass-shadow-hover, 0 6px 20px rgba(0,0,0,0.25));
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* ── NavBar glass surface ───────────────────────────────── */
+.navbar {
+  background: var(--glass-bg, var(--accent-color));
+  backdrop-filter: var(--glass-blur, none);
+  -webkit-backdrop-filter: var(--glass-blur, none);
+  border-bottom: 1px solid var(--glass-border, transparent);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* ── Divider ────────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--glass-border, var(--lighter-color)),
+    transparent
+  );
+  border: none;
+  margin: 2rem 0;
+}
+
+/* ── Glow ring — accent border pulse ───────────────────── */
+@keyframes glass-glow-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 var(--animation-color-first); }
+  50%       { box-shadow: 0 0 0 8px var(--animation-color-second); }
+}
+
+.glowRing {
+  animation: glass-glow-pulse 3s ease-in-out infinite;
+}
+
+/* ── Tag / skill chip ───────────────────────────────────── */
+.chip {
+  display: inline-block;
+  padding: 0.25em 0.75em;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--glass-bg, rgba(255,255,255,0.08));
+  backdrop-filter: var(--glass-blur, none);
+  -webkit-backdrop-filter: var(--glass-blur, none);
+  border: 1px solid var(--glass-border, var(--lighter-color));
+  color: var(--text-color);
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.chip:hover {
+  border-color: var(--glass-border-hover, var(--lighter-color));
+  background: var(--glass-bg-hover, rgba(255,255,255,0.13));
+}

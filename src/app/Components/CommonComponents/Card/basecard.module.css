@@ -1,9 +1,21 @@
 .card {
+    position: relative;
     width: 100%;
     z-index: 0;
-    background-color: var(--accent-color);
+    background: var(--glass-bg, var(--accent-color));
+    backdrop-filter: var(--glass-blur, none);
+    -webkit-backdrop-filter: var(--glass-blur, none);
+    border: 1px solid var(--glass-border, transparent);
+    box-shadow: var(--glass-shadow, none);
     color: var(--text-color);
-    border-radius: 1rem;
+    border-radius: var(--glass-radius, 1rem);
     padding: 1rem;
     box-sizing: border-box;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    background: var(--glass-bg-hover, var(--accent-color));
+    border-color: var(--glass-border-hover, transparent);
+    box-shadow: var(--glass-shadow-hover, none);
 }

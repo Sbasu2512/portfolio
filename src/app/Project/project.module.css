@@ -60,9 +60,13 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    background-color: var(--accent-color);
+    background: var(--glass-bg, var(--accent-color));
+    backdrop-filter: var(--glass-blur, none);
+    -webkit-backdrop-filter: var(--glass-blur, none);
+    border: 1px solid var(--glass-border, transparent);
+    box-shadow: var(--glass-shadow, none);
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: var(--glass-radius, 1rem);
 }
 
 .card_img {
@@ -113,6 +117,49 @@
     }
 }
 
+/* ─── Responsive breakpoints ─────────────────────────────── */
+/* small desktop / landscape tablet */
+@media (max-width: 1200px) {
+    .collage {
+        width: 90%;
+        gap: 2rem;
+    }
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .wrapper {
+        padding: 1.5rem;
+    }
+
+    .collage {
+        width: 95%;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .roboto_bold {
+        font-size: 2rem;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 1rem;
+    }
+
+    .collage {
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .roboto_bold {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+}
+
 @media (min-width: 300px) and (max-width: 499px) {
     .animated_box {
         justify-content: center;
@@ -121,7 +168,7 @@
             width: 250px;
         }
     }
-    
+
         .roboto_bold {
             line-height: 1rem;
             font-size: 10px;

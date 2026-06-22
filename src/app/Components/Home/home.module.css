@@ -74,7 +74,12 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: var(--accent-color);
+    background: var(--glass-bg, var(--accent-color));
+    backdrop-filter: var(--glass-blur, none);
+    -webkit-backdrop-filter: var(--glass-blur, none);
+    border: 1px solid var(--glass-border, transparent);
+    box-shadow: var(--glass-shadow, none);
+    border-radius: var(--glass-radius, 0);
     color: var(--text-color);
 }
 
@@ -141,7 +146,10 @@
     width: 30%;
     height: 100%;
     border-radius: 50%;
-    background-color: var(--accent-color);
+    background: var(--glass-bg, var(--accent-color));
+    backdrop-filter: var(--glass-blur, none);
+    -webkit-backdrop-filter: var(--glass-blur, none);
+    border: 1px solid var(--glass-border, transparent);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -254,6 +262,10 @@
 }
 
 @media (min-width: 500px) and (max-width: 899px) {
+    .wrapper {
+        margin: 8rem 2rem 3rem;
+    }
+
     .av_img {
         width: 5rem;
         height: 5rem;
@@ -277,6 +289,14 @@
 }
 
 @media (min-width: 300px) and (max-width: 499px) {
+    .container {
+        height: auto;
+    }
+
+    .wrapper {
+        margin: 6rem 1rem 2rem;
+    }
+
     .av_img {
         width: 4em;
         height: 3.5em;
@@ -285,14 +305,20 @@
 
     .socials_container {
         justify-content: center;
+        gap: 1rem;
 
         .socials {
             gap: 12px;
         }
     }
 
+    .accent {
+        height: auto;
+        padding: 1rem 0;
+    }
+
     .playfair_display_header {
-        font-size: 1rem;
+        font-size: 1.6rem;
     }
 
     .avatar {

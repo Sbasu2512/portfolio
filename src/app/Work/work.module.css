@@ -43,3 +43,49 @@
 .work_ex_padding {
     padding: 0 8rem 0 8rem;
 }
+
+/* ─── Responsive breakpoints ─────────────────────────────── */
+/* small desktop / landscape tablet */
+@media (max-width: 1200px) {
+    .work_ex_padding {
+        padding: 0 4rem;
+    }
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .work_ex_padding {
+        padding: 0 2rem;
+    }
+
+    .playfair_display_header {
+        font-size: 2.25rem;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 1rem;
+        gap: 1.25rem;
+    }
+
+    .work_ex_padding {
+        padding: 0 0.5rem;
+    }
+
+    .playfair_display_header {
+        font-size: 1.6rem;
+    }
+}
+
+/* small mobile */
+@media (max-width: 400px) {
+    .work_ex_padding {
+        padding: 0;
+    }
+
+    .playfair_display_header {
+        font-size: 1.3rem;
+    }
+}

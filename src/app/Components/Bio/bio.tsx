@@ -12,7 +12,7 @@ const picture: Record<Theme, { src: string }> = {
   purple: { src: '/assets/images/pictures/purple.jpg' },
   light: { src: '/assets/images/pictures/light_pic.jpg' },
   dark: { src: '/assets/images/pictures/dark_pic.jpg' },
-  red: { src: '/assets/images/pictures/dark_pic.jpg' }
+  glass: { src: '/assets/images/pictures/dark_pic.jpg' }
 };
 
 export default function Bio({ theme }: BioProps) {

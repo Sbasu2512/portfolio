@@ -16,6 +16,7 @@ body {
   box-sizing: inherit;
 }
 
+/* ─── DEFAULT (light) ────────────────────────────────────── */
 :root {
   --main-color: #f7f2e0;
   --accent-color: #e1b469;
@@ -26,7 +27,7 @@ body {
   --animation-color-third: rgba(236, 193, 122, 0.8);
 }
 
-/* purple theme */
+/* ─── PURPLE ─────────────────────────────────────────────── */
 .purple {
   --main-color: #2b1a3f;
   --accent-color: #7b3fbc;
@@ -37,7 +38,7 @@ body {
   --text-color: #fbe580;
 }
 
-/* dark theme */
+/* ─── DARK ───────────────────────────────────────────────── */
 .dark {
   --main-color: #290606;
   --accent-color: #5a1717;
@@ -46,10 +47,9 @@ body {
   --animation-color-first: rgba(197, 123, 123, 0.2);
   --animation-color-second: rgba(197, 123, 123, 0.4);
   --animation-color-third: rgba(197, 123, 123, 0.8);
-
 }
 
-/* light theme */
+/* ─── LIGHT ──────────────────────────────────────────────── */
 .light {
   --main-color: #f7f2e0;
   --accent-color: #e1b469;
@@ -60,9 +60,9 @@ body {
   --animation-color-third: rgba(236, 193, 122, 0.8);
 }
 
-/* red theme */
+/* ─── RED ────────────────────────────────────────────────── */
 .red {
-  --main-color:  #DA291C;
+  --main-color: #DA291C;
   --accent-color: #ccab00;
   --text-color: #000000;
   --lighter-color: #F7DC6F;
@@ -71,7 +71,75 @@ body {
   --animation-color-third: rgba(242, 196, 100, 0.8);
 }
 
-/* Scrollbar styles */
+/* ─── LIQUID GLASS ───────────────────────────────────────── */
+/*
+  A cool-toned deep-ocean backdrop with iridescent glass surfaces.
+  Accent pulls from refracted aquamarine — the hue you see when
+  light bends through thick clear glass held over dark water.
+
+  --glass-*        backdrop-filter glass card helpers (used by LiquidGlass.module.css)
+  --glass-border   subtle prismatic rim light
+  --glass-shadow   depth shadow beneath floating panels
+  --glass-shine    top-edge specular highlight
+*/
+.glass {
+  /* Core palette */
+  --main-color: #050d1a;
+  --accent-color: rgba(100, 220, 210, 0.18);
+  --text-color: #e8f4f8;
+  --lighter-color: rgba(120, 230, 220, 0.35);
+
+  /* Animation glows — aquamarine iridescence */
+  --animation-color-first: rgba(80, 200, 200, 0.12);
+  --animation-color-second: rgba(80, 200, 200, 0.28);
+  --animation-color-third: rgba(80, 200, 200, 0.65);
+
+  /* Glass material tokens */
+  --glass-bg: rgba(255, 255, 255, 0.06);
+  --glass-bg-hover: rgba(255, 255, 255, 0.11);
+  --glass-border: rgba(255, 255, 255, 0.18);
+  --glass-border-hover: rgba(140, 230, 220, 0.45);
+  --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.45), 0 2px 8px rgba(0, 0, 0, 0.3);
+  --glass-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.55), 0 4px 16px rgba(80, 200, 200, 0.15);
+  --glass-shine: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.18) 0%,
+    rgba(255, 255, 255, 0.04) 50%,
+    rgba(80, 200, 200, 0.06) 100%
+  );
+  --glass-blur: blur(18px) saturate(160%);
+  --glass-radius: 16px;
+  --glass-overlay-bg: rgba(5, 13, 26, 0.72);
+
+  /* Gradient background — animated deep water mesh */
+  background: radial-gradient(ellipse at 20% 30%, #0a2a40 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 70%, #071a2e 0%, transparent 60%),
+              radial-gradient(ellipse at 50% 100%, #0d1f35 0%, transparent 50%),
+              #050d1a;
+}
+
+/* Animated mesh orbs behind content (applied on body.liquid-glass) */
+.glass::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 15% 25%, rgba(40, 160, 200, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 80% 15%, rgba(80, 100, 200, 0.10) 0%, transparent 35%),
+    radial-gradient(circle at 60% 80%, rgba(30, 180, 160, 0.10) 0%, transparent 38%);
+  animation: lg-orb-drift 18s ease-in-out infinite alternate;
+}
+
+@keyframes lg-orb-drift {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(20px, -30px) scale(1.04); }
+  66%  { transform: translate(-15px, 20px) scale(0.97); }
+  100% { transform: translate(10px, -10px) scale(1.02); }
+}
+
+/* ─── SCROLLBAR ──────────────────────────────────────────── */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

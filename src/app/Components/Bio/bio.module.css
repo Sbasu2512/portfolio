@@ -18,7 +18,12 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    background-color: var(--accent-color);
+    background: var(--glass-bg, var(--accent-color));
+    backdrop-filter: var(--glass-blur, none);
+    -webkit-backdrop-filter: var(--glass-blur, none);
+    border: 1px solid var(--glass-border, transparent);
+    box-shadow: var(--glass-shadow, none);
+    border-radius: var(--glass-radius, 0);
     color: var(--text-color);
     padding: 2rem;
     margin: 0 auto;
