@@ -1,5 +1,5 @@
 .container {
-    height: 80vh;
+    min-height: 80vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -13,8 +13,8 @@
     align-items: center;
     flex-direction: column;
     /* top | left and right | bottom */
-    margin: 10rem 5rem 5rem;
-    height: 100%;
+    margin: clamp(5rem, 10vh, 10rem) 5rem 3rem;
+    height: auto;
     width: 100%;
 }
 
@@ -66,7 +66,8 @@
 }
 
 .accent {
-    height: 30vh;
+    min-height: clamp(7.5rem, 24vh, 12rem);
+    height: auto;
     width: 80%;
     min-width: 0;
     display: flex;
@@ -75,6 +76,8 @@
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
+    padding: 1rem;
+    gap: 0.5rem;
     background: var(--glass-bg, var(--accent-color));
     backdrop-filter: var(--glass-blur, none);
     -webkit-backdrop-filter: var(--glass-blur, none);
@@ -141,7 +144,7 @@
     text-align: center;
 }
 
-.playfair_display {
+.typewriter {
     font-family: "Playfair Display", serif;
     font-weight: 500;
     font-style: normal;
@@ -151,6 +154,11 @@
     min-height: 1.5em;
     overflow-wrap: anywhere;
     text-align: center;
+    white-space: normal;
+}
+
+.typewriter > span {
+    overflow-wrap: anywhere;
 }
 
 .circle {
@@ -237,9 +245,6 @@
         gap: 10rem;
     }
 
-    .playfair_display{
-        margin-bottom: 4rem;
-    }
 }
 
 @media (min-width: 1024px) and (max-width: 1499px) {
@@ -339,5 +344,24 @@
     .circle {
         width: 34%;
         height: 50%;
+    }
+}
+
+@media (max-height: 700px) and (min-width: 900px) {
+    .container {
+        min-height: auto;
+    }
+
+    .wrapper {
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+
+    .avatar {
+        height: 8rem;
+    }
+
+    .accent {
+        min-height: 8rem;
     }
 }

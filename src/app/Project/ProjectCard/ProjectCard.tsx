@@ -6,9 +6,17 @@ type ProjectCardProps = {
 };
 
 export default function ProjectCard({ project }: ProjectCardProps) {
+  const hasImage = Boolean(project.image_url && project.image_url !== 'null');
+
   return (
     <div className={styles.card}>
-      <img src={project.image_url} alt={project.project_name} className={styles.image} />
+      {hasImage ? (
+        <img src={project.image_url} alt={project.project_name} className={styles.image} />
+      ) : (
+        <div className={styles.imagePlaceholder} aria-hidden="true">
+          <span>{project.project_name}</span>
+        </div>
+      )}
 
       <div className={styles.overlay}>
         <h3>{project.project_name}</h3>

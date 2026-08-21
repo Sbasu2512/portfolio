@@ -63,10 +63,8 @@ export default function LandingPage({ theme, windowWidth }: LandingPageProps) {
           </div>
         </div>
         <div className={styles.accent}>
-          <span>
-            <h1 className={styles.playfair_display_header}>Sayantan Basu</h1>
-          </span>
-          <span className={styles.playfair_display}>
+          <h1 className={styles.playfair_display_header}>Sayantan Basu</h1>
+          <div className={styles.typewriter}>
             <Typewriter
               words={[
                 'Full-Stack Developer',
@@ -79,7 +77,7 @@ export default function LandingPage({ theme, windowWidth }: LandingPageProps) {
               cursor={true}
               cursorBlinking={true}
             />
-          </span>
+          </div>
         </div>
         <div className={styles.socials_container}>
           <div className={styles.socials}>

@@ -24,6 +24,19 @@
   display: block;
 }
 
+.imagePlaceholder {
+  aspect-ratio: 3 / 2;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--accent-color), var(--main-color));
+  color: var(--text-color);
+  font-family: "Playfair Display", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 /* tablet */
 @media (max-width: 900px) {
   .card {
