@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     height: auto;
-    background-color: var(--main-color);
+    background-color: var(--section-background, var(--main-color));
 }
 
 .wrapper {

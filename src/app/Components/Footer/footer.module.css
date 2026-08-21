@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    background-color: var(--main-color);
+    background-color: var(--section-background, var(--main-color));
     display: flex;
     height: 3rem;
 }

@@ -7,6 +7,9 @@
   transition: transform 0.3s ease;
   width: 360px;
   max-width: 100%;
+  background: var(--glass-bg, var(--accent-color));
+  border: 1px solid var(--glass-border, transparent);
+  box-shadow: var(--glass-shadow, none);
 }
 
 .card:hover {
@@ -15,8 +18,9 @@
 
 .image {
   width: 100%;
-  height: 240px;
-  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: contain;
   display: block;
 }
 
@@ -26,19 +30,12 @@
     width: 300px;
   }
 
-  .image {
-    height: 200px;
-  }
 }
 
 /* mobile */
 @media (max-width: 600px) {
   .card {
     width: 100%;
-  }
-
-  .image {
-    height: 220px;
   }
 
   /* touch devices: reveal the overlay without hover */

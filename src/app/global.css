@@ -25,6 +25,7 @@ body {
   --animation-color-first: rgba(236, 193, 122, 0.2);
   --animation-color-second: rgba(236, 193, 122, 0.4);
   --animation-color-third: rgba(236, 193, 122, 0.8);
+  --section-background: var(--main-color);
 }
 
 /* ─── PURPLE ─────────────────────────────────────────────── */
@@ -110,12 +111,14 @@ body {
   --glass-blur: blur(18px) saturate(160%);
   --glass-radius: 16px;
   --glass-overlay-bg: rgba(5, 13, 26, 0.72);
+  --section-background: transparent;
 
   /* Gradient background — animated deep water mesh */
   background: radial-gradient(ellipse at 20% 30%, #0a2a40 0%, transparent 60%),
               radial-gradient(ellipse at 80% 70%, #071a2e 0%, transparent 60%),
               radial-gradient(ellipse at 50% 100%, #0d1f35 0%, transparent 50%),
               #050d1a;
+  background-attachment: fixed;
 }
 
 /* Animated mesh orbs behind content (applied on body.liquid-glass) */

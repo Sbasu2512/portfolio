@@ -10,6 +10,10 @@
     "lint": "next lint",
     "clean": "rm -rf .next node_modules package-lock.json"
   },
+  "engines": {
+    "node": ">=24 <25",
+    "npm": ">=11"
+  },
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",

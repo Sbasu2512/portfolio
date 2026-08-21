@@ -95,6 +95,30 @@
     ],
     "projects": [
         {
+            "project_name": "Stock Return Prediction Model",
+            "tech_stack": "pytorch, hugging face transformers, ONNX Runtime, Optimum",
+            "description": "Built on XGBoost binary classifier to predict short horizon positive-return breakouts(>= 3% within 5 trading days) across Indian equity market",
+            "repo_link": "https://huggingface.co/sbasu2512/return-prediction",
+            "live_link": "https://huggingface.co/spaces/sbasu2512/stock-scraper",
+            "image_url": "null"
+        },
+        {
+            "project_name": "Financial Sentiment Analysis Model",
+            "tech_stack": "pytorch, hugging face transformers, ONNX Runtime, Optimum",
+            "description": "Fine-tuned a domain specific sentiment classifier for financial news and market headlines, built on FinBERT and adapted for India and global equity markets. This model classifies text into positive, neutral and negative sentiment to support algorithmic trading signals and risk monitoring.",
+            "repo_link": "https://huggingface.co/sbasu2512/financial_sentiment_model",
+            "live_link": null,
+            "image_url": "null"
+        },
+        {
+            "project_name": "Goal Predictor",
+            "tech_stack": "FastAPI, python, React",
+            "description": "This project contains my own fine-tuned model which is being used to predict the goals that a player might score.",
+            "repo_link": "https://github.com/Sbasu2512/goals_predictor",
+            "live_link": "https://goal-prediction-app.onrender.com",
+            "image_url": "/assets/images/repo_images/goals_predictor.png"
+        },
+        {
             "project_name": "Lotide",
             "tech_stack": "JavaScript",
             "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a clone of lodash JavaScript library to practice various types of functions using JavaScript.",
@@ -114,7 +138,7 @@
             "project_name": "Tweeter",
             "tech_stack": "HTML, CSS, JS, jQuery, Ajax",
             "description": "It is a single page twitter clone built with HTML, CSS, JS, jQuery and Ajax.",
-            "repo_link": null,
+            "repo_link": "https://github.com/Sbasu2512/tweeter",
             "live_link": "https://tweeter-bgdk.onrender.com",
             "image_url": "/assets/images/repo_images/tweeter.png"
         },
@@ -133,14 +157,6 @@
             "repo_link": "https://github.com/Sbasu2512/jungle-rails",
             "live_link": null,
             "image_url": "/assets/images/repo_images/jungle-rails.png"
-        },
-        {
-            "project_name": "Goal Predictor",
-            "tech_stack": "FastAPI, python, React",
-            "description": "This project contains my own trained model which is being used to predict the goals that a player might score.",
-            "repo_link": "https://github.com/Sbasu2512/goals_predictor",
-            "live_link": "https://goal-prediction-app.onrender.com",
-            "image_url": "/assets/images/repo_images/goals_predictor.png"
         }
     ],
     "skills": [
