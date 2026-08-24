@@ -173,14 +173,6 @@ function Sidebar({
                     </span>
                 </span>
 
-                <span className="contact-item location">
-                    <span
-                        className="contact-icon location-icon"
-                        aria-hidden="true"
-                    />
-                    <span>Chennai, Tamil Nadu, India</span>
-                </span>
-
                 <a
                     href="mailto:sayantanworks@gmail.com"
                     className="contact-item"
@@ -192,32 +184,7 @@ function Sidebar({
                     <span>sayantanworks@gmail.com</span>
                 </a>
 
-                <a
-                    href={GITHUB_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="contact-item"
-                >
-                    <span
-                        className="contact-icon github-icon"
-                        aria-hidden="true"
-                    />
-                    <span>github.com/Sbasu2512</span>
-                </a>
-
-                <a
-                    href={HUGGINGFACE_URL}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="contact-item"
-                >
-                    <span
-                        className="contact-icon huggingface-icon"
-                        aria-hidden="true"
-                    />
-                    <span>huggingface.co/sbasu2512</span>
-                </a>
-
+                
                 <span className="contact-item location">
                     <span
                         className="contact-icon location-icon"
