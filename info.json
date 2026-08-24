@@ -1,10 +1,19 @@
 {
     "work_experience": [
         {
+            "company_name": "Logitech",
+            "location": "Chennai, TN, India",
+            "start_date": "Jan 2026",
+            "end_date": "Present",
+            "position": "Senior Software Engineer",
+            "client": null,
+            "responsibilities": "Develops production-grade web applications utilizing React.js, Redux, JavaScript, and SCSS, focusing on the creation of maintainable, high-performing, and reusable UI components. Designs responsive interfaces leveraging modern Flexbox and CSS Grid layouts while ensuring robust application reliability and minimal regressions through comprehensive unit and acceptance testing. Collaborates closely with cross-functional engineering and QA teams across all stages of debugging, testing, and release cycles, utilizing Git/GitHub for version control and taking end-to-end feature ownership across the software development lifecycle."
+        },
+        {
             "company_name": "NexSemi System Pvt Ltd",
             "location": "Chennai, TN, India",
             "start_date": "Nov 2024",
-            "end_date": "Present",
+            "end_date": "Dec 2025",
             "position": "Senior Software Engineer",
             "client": "Logitech Pvt Ltd",
             "responsibilities": "adept at building reusable UI components using React.js, Redux, and SCSS, with a strong focus on code reliability through extensive unit and acceptance testing. Proficient in JavaScript fundamentals, modern CSS layouts (Flexbox, Grid), and animations, consistently delivering optimized user experiences aligned with product goals. Demonstrates strong ownership, leveraging robust CS fundamentals and version control (Git/GitHub) to produce understandable, maintainable, and high-performing software."
@@ -33,38 +42,6 @@
             "start_date": "Sep 2021",
             "end_date": "Feb 2022",
             "responsibilities": "Developed full-stack web applications using Agile/Scrum methodology. Built responsive UI with ReactJS, Redux, TypeScript, HTML5, and CSS. Created backend services using TypeScript, Google Firebase, and Google Cloud Platform (GCP) following MVC architecture. Implemented design patterns, managed state with Redux Saga, and integrated real-time AI, IoT systems, and external APIs. Performed testing, documentation, bug fixes, and performance optimization. Collaborated on an intelligent freight logistics platform. Used JIRA for issue tracking and BitBucket for version control."
-        },
-        {
-            "company_name": "Resolve Six",
-            "position": "Software Testing Trainee",
-            "location": "Mississauga, ON, CA",
-            "start_date": "Jan 2021",
-            "end_date": "Mar 2021",
-            "responsibilities": "Developed automated test scripts using Selenium WebDriver, Java, TestNG, and JUnit in Agile/Scrum environments. Implemented BDD framework with Gherkin, created test cases/scenarios, and executed cross-browser/parallel testing. Utilized Page Object Model and Data-Driven frameworks with Apache POI for Excel data. Managed synchronization via explicit/implicit waits and captured screenshots for failures. Conducted functional testing of SOAP/REST APIs and end-to-end integration testing. Configured Jenkins CI pipelines and managed code via GitHub. Used JIRA for defect tracking and participated in sprint planning/reviews. Managed dependencies with Maven and performed database validation via JDBC."
-        },
-        {
-            "company_name": "Tech Electric Automation Inc.",
-            "position": "Electrical Project Coordinator",
-            "location": "Burlington, ON, CA",
-            "start_date": "Nov 2018",
-            "end_date": "Oct 2019",
-            "responsibilities": "Managed procurement, including market research, supplier negotiation, and relationship management. Scheduled and supervised a team of technicians, ensuring customer satisfaction and documentation completion post-job. Created technical drawings using DraftSight and coordinated ESA inspections. Managed purchase orders, work orders, and prepared maintenance manuals. Utilized Project Management software to develop Work Breakdown Structures (WBS) and set daily targets for project tracking."
-        },
-        {
-            "company_name": "Walmart Canada Corporation",
-            "position": "Customer Service Manager",
-            "location": "Burlington, ON, CA",
-            "start_date": "May 2018",
-            "end_date": "July 2019",
-            "responsibilities": "Led front-end operations, responding to CSM calls to assign cashiers to registers and manage break schedules. Trained Cashiers and Courtesy Desk Associates on new programs. Coordinated with management and sales floor to ensure adequate coverage. Resolved customer disputes and concerns at registers and service desks, making sound judgment calls. Motivated the team to achieve a 5% sales target for Walmart Rewards MasterCard applications while promoting positive public relations."
-        },
-        {
-            "company_name": "GSE-R-US",
-            "position": "Industrial Parts Purchaser & Logistics Coordinator",
-            "location": "Mississauga, ON, CA",
-            "start_date": "July 2018",
-            "end_date": "Oct 2018",
-            "responsibilities": "Managed procurement by sourcing parts, conducting market research, and negotiating with suppliers to secure cost-effective terms (achieving 15% cost reduction). Facilitated global logistics, arranging transportation, customs documentation, and timely deliveries while maintaining customer shipment updates. Reported directly to the MD on production/parts status. Generated new leads for parts and shipping partners, nurtured supplier relationships, and assisted accounting with payroll."
         }
     ],
     "education": [
@@ -99,6 +76,7 @@
             "tech_stack": "pytorch, hugging face transformers, ONNX Runtime, Optimum",
             "description": "Built on XGBoost binary classifier to predict short horizon positive-return breakouts(>= 3% within 5 trading days) across Indian equity market",
             "repo_link": "https://huggingface.co/sbasu2512/return-prediction",
+            "repo_type": "HuggingFace",
             "live_link": "https://huggingface.co/spaces/sbasu2512/stock-scraper",
             "image_url": "null"
         },
@@ -107,6 +85,7 @@
             "tech_stack": "pytorch, hugging face transformers, ONNX Runtime, Optimum",
             "description": "Fine-tuned a domain specific sentiment classifier for financial news and market headlines, built on FinBERT and adapted for India and global equity markets. This model classifies text into positive, neutral and negative sentiment to support algorithmic trading signals and risk monitoring.",
             "repo_link": "https://huggingface.co/sbasu2512/financial_sentiment_model",
+            "repo_type": "HuggingFace",
             "live_link": null,
             "image_url": "null"
         },
@@ -115,6 +94,7 @@
             "tech_stack": "FastAPI, python, React",
             "description": "This project contains my own fine-tuned model which is being used to predict the goals that a player might score.",
             "repo_link": "https://github.com/Sbasu2512/goals_predictor",
+            "repo_type": "Github",
             "live_link": "https://goal-prediction-app.onrender.com",
             "image_url": "/assets/images/repo_images/goals_predictor.png"
         },
@@ -123,6 +103,7 @@
             "tech_stack": "JavaScript",
             "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a clone of lodash JavaScript library to practice various types of functions using JavaScript.",
             "repo_link": "https://github.com/Sbasu2512/lotide",
+            "repo_type": "Github",
             "live_link": "https://www.npmjs.com/package/@sayantan2512/lotide",
             "image_url": "/assets/images/repo_images/lotide.png"
         },
@@ -130,7 +111,8 @@
             "project_name": "TinyApp",
             "tech_stack": "HTML, CSS, AJAX, Express JS, Node JS",
             "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a full-stack web app built with an HTTP Server that handles requests from the browser (client). Along the way we got introduced to some more advanced JavaScript and Node concepts, and we also learnt more about Express JS.",
-            "repo_link": null,
+            "repo_link": "https://github.com/Sbasu2512/tinyapp",
+            "repo_type": "Github",
             "live_link": "https://tiny-app-s92i.onrender.com/login",
             "image_url": "/assets/images/repo_images/tinyapp.png"
         },
@@ -139,6 +121,7 @@
             "tech_stack": "HTML, CSS, JS, jQuery, Ajax",
             "description": "It is a single page twitter clone built with HTML, CSS, JS, jQuery and Ajax.",
             "repo_link": "https://github.com/Sbasu2512/tweeter",
+            "repo_type": "Github",
             "live_link": "https://tweeter-bgdk.onrender.com",
             "image_url": "/assets/images/repo_images/tweeter.png"
         },
@@ -147,6 +130,7 @@
             "tech_stack": "React, R-spec, Cypress, Storybook, Axios",
             "description": "It is a React application that allows users to book and cancel interviews. In this project, there is a combination of concise API with a WebSocket server to build a real-time experience. Testing was done using R-spec and Cypress. We learnt about React Hooks through this project and implementing REST API with axios.",
             "repo_link": "https://github.com/Sbasu2512/Interview-Scheduler",
+            "repo_type": "Github",
             "live_link": null,
             "image_url": "/assets/images/repo_images/Interview-Scheduler.png"
         },
@@ -155,6 +139,7 @@
             "tech_stack": "Ruby on Rails, HTML, CSS, JavaScript, jQuery",
             "description": "It was a project made as a part of the Lighthouse Labs curriculum. It is a mini ecommerce website built with Ruby with Rails for the purposes of learning Rails 4.2 by example.",
             "repo_link": "https://github.com/Sbasu2512/jungle-rails",
+            "repo_type": "Github",
             "live_link": null,
             "image_url": "/assets/images/repo_images/jungle-rails.png"
         }

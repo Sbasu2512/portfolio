@@ -39,12 +39,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
           {project.repo_link && (
             <a
-              href={project.repo_link}
+              href={project?.repo_link}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.repo}
             >
-              GitHub
+              {project?.repo_type || 'Github'}
             </a>
           )}
         </div>

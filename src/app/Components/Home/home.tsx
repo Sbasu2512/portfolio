@@ -93,9 +93,7 @@ export default function LandingPage({ theme, windowWidth }: LandingPageProps) {
             </div>
             <div>
               <a
-                href="https://drive.google.com/file/d/1xkp7TN_EyH2v4osM4e7q3H42vqk4Ds2x/preview"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/resume"
                 className={styles.text_no_dec}
               >
                 <FontAwesomeIcon icon={faFile} className={styles.icon_social} />

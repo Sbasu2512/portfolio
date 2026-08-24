@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 100 100">
+  <!-- Base Background Face (Slightly transparent to keep contrast with facial features) -->
+  <circle cx="50" cy="46" r="34" fill="currentColor" opacity="0.15" />
+  
+  <!-- Cheeks/Blush -->
+  <circle cx="28" cy="52" r="7" fill="currentColor" opacity="0.25" />
+  <circle cx="72" cy="52" r="7" fill="currentColor" opacity="0.25" />
+
+  <!-- Eyes -->
+  <circle cx="34" cy="40" r="4.5" fill="currentColor" />
+  <circle cx="66" cy="40" r="4.5" fill="currentColor" />
+
+  <!-- Happy Open Smile -->
+  <path d="M 34 50 A 16 16 0 0 0 66 50 Z" fill="currentColor" />
+  
+  <!-- Tongue/Inner Mouth Details (Slightly lighter contrast) -->
+  <path d="M 40 60 A 10 10 0 0 0 60 60 Z" fill="currentColor" opacity="0.4" />
+
+  <!-- Left Hugging Hand -->
+  <g transform="translate(14, 52)">
+    <!-- Palm -->
+    <path d="M 12 18 C 12 8, -2 4, 1 18 C 3 26, 12 26, 12 18 Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.5" />
+    <!-- Fingers -->
+    <path d="M 8 10 C 10 2, -2 -2, 2 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    <path d="M 11 12 C 14 4, 2 0, 5 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    <path d="M 13 15 C 17 8, 5 4, 8 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+  </g>
+
+  <!-- Right Hugging Hand -->
+  <g transform="translate(86, 52) scale(-1, 1)">
+    <!-- Palm -->
+    <path d="M 12 18 C 12 8, -2 4, 1 18 C 3 26, 12 26, 12 18 Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-width="1.5" />
+    <!-- Fingers -->
+    <path d="M 8 10 C 10 2, -2 -2, 2 10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    <path d="M 11 12 C 14 4, 2 0, 5 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    <path d="M 13 15 C 17 8, 5 4, 8 15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>

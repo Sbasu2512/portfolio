@@ -24,6 +24,7 @@ export type Project = {
   repo_link: string | null;
   live_link: string | null;
   image_url: string;
+  repo_type: string | null;
 };
 
 export type Skill = {
