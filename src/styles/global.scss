@@ -1,0 +1,62 @@
+@use "./variables" as v;
+
+// Fonts are loaded via <link> tags in index.html (not @import here) so they
+// don't sit in a render-blocking chain behind the rest of the app's CSS.
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  background: v.$color-bg;
+  color: v.$color-ink;
+  font-family: v.$font-body;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: v.$font-display;
+  margin: 0;
+  font-weight: 500;
+}
+
+a { color: inherit; }
+
+button { font-family: inherit; }
+
+::selection { background: v.$color-accent; color: #1a1206; }
+
+:focus-visible {
+  outline: 2px solid v.$color-accent;
+  outline-offset: 2px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding-inline: clamp(18px, 4vw, 40px);
+
+  @include v.respond(desktop) { max-width: 1320px; }
+  @include v.respond(big-24) { max-width: 1560px; }
+  @include v.respond(big-32) { max-width: 1840px; }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

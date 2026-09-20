@@ -1,0 +1,30 @@
+@use "../../styles/variables" as v;
+
+.page {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+.sceneLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(5, 7, 12, 0.55) 0%, rgba(5, 7, 12, 0.25) 22%, rgba(5, 7, 12, 0.55) 78%, rgba(5, 7, 12, 0.8) 100%);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  padding-top: calc(v.$nav-height + 18px);
+  padding-bottom: 30px;
+}

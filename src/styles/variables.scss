@@ -1,0 +1,42 @@
+// ---------------------------------------------------------------------------
+// Design tokens + responsive breakpoints
+// Scale: 32" desktop -> 24" desktop -> desktop -> laptop (11-15") -> tablet -> mobile
+// ---------------------------------------------------------------------------
+@use "sass:map";
+
+$color-bg: #05070c;
+$color-ink: #f3efe6;
+$color-ink-dim: rgba(243, 239, 230, 0.62);
+$color-accent: #ffb04a;
+$color-accent-2: #6fd8c7;
+$color-violet: #7c7ce8;
+$color-glass: rgba(10, 12, 18, 0.55);
+$color-edge: rgba(255, 255, 255, 0.12);
+
+$font-display: "Handjet", "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+$font-body: "Handjet", "DM Sans", "Segoe UI", system-ui, sans-serif;
+
+$nav-height: 76px;
+$footer-height: 46px;
+
+$breakpoints: (
+  mobile: 0,
+  tablet: 600px,
+  laptop: 1024px,
+  desktop: 1440px,
+  big-24: 1920px,
+  big-32: 2560px,
+);
+
+@mixin respond($name) {
+  @media (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+@mixin glass {
+  background: $color-glass;
+  border: 1px solid $color-edge;
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+}

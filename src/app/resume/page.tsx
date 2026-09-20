@@ -1,6 +1,6 @@
 "use client";
 
-import info from "../../../info.json";
+import info from "src/data/info.json";
 import { useState } from "react";
 import "./resume.css";
 import type {
