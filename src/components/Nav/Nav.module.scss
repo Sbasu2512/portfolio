@@ -1,0 +1,129 @@
+@use "../../styles/variables" as v;
+
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  height: v.$nav-height;
+  display: flex;
+  align-items: center;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 3vw, 32px);
+
+  @include v.respond(big-24) { max-width: 1560px; }
+  @include v.respond(big-32) { max-width: 1840px; }
+}
+
+.logo {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 45%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid v.$color-edge;
+
+  img { display: block; border-radius: 6px; }
+}
+
+// Links span the remaining width and space themselves evenly — the count
+// comes entirely from info.nav, so adding/removing an entry re-flows this.
+.links {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  @media (max-width: 767px) {
+    position: fixed;
+    top: v.$nav-height;
+    left: 0; right: 0;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 20px 22px;
+    background: rgba(6, 8, 14, 0.92);
+    backdrop-filter: blur(16px);
+    transform: translateY(-8px);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+
+    &.open {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+  }
+}
+
+.link {
+  position: relative;
+  padding: 8px 4px;
+  font-family: v.$font-display;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  color: v.$color-ink-dim;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 100%;
+    bottom: 0;
+    height: 1.5px;
+    background: v.$color-accent;
+    transition: right 0.25s ease;
+  }
+  &:hover { color: v.$color-ink; }
+  &:hover::after { right: 0; }
+}
+.active {
+  color: v.$color-ink;
+  &::after { right: 0; }
+}
+
+// Sits where "Themes" used to be — inert for now, holding the spot in the
+// evenly-spaced row until themes ship.
+.brandPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid v.$color-edge;
+
+  img { display: block; border-radius: 50%; opacity: 0.9; }
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px; height: 34px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  span {
+    display: block;
+    height: 2px;
+    background: v.$color-ink;
+    border-radius: 2px;
+  }
+
+  @media (max-width: 767px) { display: flex; }
+}

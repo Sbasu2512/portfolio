@@ -1,52 +1,37 @@
 {
-  "name": "portfolio",
-  "version": "1.0.0",
+  "name": "sayantan-portfolio",
   "private": true,
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "tsx server.ts",
-    "build": "next build",
-    "start": "NODE_ENV=production tsx server.ts",
-    "lint": "eslint .",
-    "clean": "rm -rf .next node_modules package-lock.json"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
   },
   "engines": {
     "node": ">=24 <25",
     "npm": ">=11"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@fortawesome/fontawesome-svg-core": "^7.3.1",
-    "@fortawesome/free-brands-svg-icons": "^7.3.1",
-    "@fortawesome/free-regular-svg-icons": "^7.3.1",
-    "@fortawesome/free-solid-svg-icons": "^7.3.1",
-    "@fortawesome/react-fontawesome": "^3.5.0",
-    "@vercel/analytics": "^2.0.1",
-    "express": "^5.2.1",
-    "grib2-simple": "^1.1.1",
-    "html2pdf.js": "^0.14.0",
-    "next": "^16.3.1",
-    "node-fetch": "^3.3.2",
-    "openmeteo": "^1.2.3",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "react-simple-typewriter": "^5.0.1",
-    "styled-components": "^6.5.3"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "three": "^0.160.0"
   },
   "devDependencies": {
-    "@types/html2pdf.js": "^0.10.0",
-    "@types/node": "26.2.0",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "^19.2.4",
-    "eslint": "^10.8.1",
-    "eslint-config-next": "^16.3.1",
-    "tsx": "^4.23.12",
-    "typescript": "^7.0.2"
+    "@sparticuz/chromium": "^153.0.0",
+    "@types/node": "^26.6.2",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "puppeteer-core": "^25.11.0",
+    "sass": "^1.79.3",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.6"
   },
-  "allowScripts": {
-    "esbuild@0.27.3": true,
-    "sharp@0.34.5": true,
-    "unrs-resolver@1.7.11": true
-  }
+  "optionalDependencies": {
+    "html2pdf.js": "^0.10.2"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

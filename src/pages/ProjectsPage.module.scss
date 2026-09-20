@@ -1,0 +1,75 @@
+@use "../styles/variables" as v;
+
+.heading {
+  font-size: clamp(30px, 6vw, 58px);
+  text-align: center;
+  margin-bottom: 26px;
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+  @include v.respond(tablet) { grid-template-columns: repeat(2, 1fr); }
+  @include v.respond(laptop) { grid-template-columns: repeat(3, 1fr); }
+  @include v.respond(big-24) { grid-template-columns: repeat(4, 1fr); }
+}
+
+.card {
+  padding: 20px;
+  border-radius: 16px;
+  @include v.glass;
+  background: rgba(6, 8, 14, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.name { font-size: 16.5px; }
+.desc { margin: 0; font-size: 13px; line-height: 1.6; color: v.$color-ink-dim; flex: 1; }
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  span {
+    font-size: 10.5px;
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: v.$color-ink-dim;
+  }
+}
+
+.links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+// Colors match the Figma project card buttons.
+.liveBtn, .repoBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  transition: filter 0.2s ease, transform 0.2s ease;
+
+  &:hover { filter: brightness(1.12); transform: translateY(-1px); }
+}
+.liveBtn { background: rgba(87, 199, 133, 0.6); }
+.repoBtn { background: rgba(253, 29, 29, 0.6); }

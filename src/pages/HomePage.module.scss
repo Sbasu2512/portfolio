@@ -1,0 +1,71 @@
+@use "../styles/variables" as v;
+
+.hero {
+  min-height: calc(100dvh - #{v.$nav-height} - 70px);
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  max-width: 560px;
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: 22px;
+  @include v.glass;
+  background: rgba(10, 8, 6, 0.5);
+}
+
+.eyebrow {
+  margin: 0;
+  font-family: v.$font-display;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: v.$color-ink-dim;
+}
+
+.name {
+  font-size: clamp(38px, 6vw, 64px);
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.85);
+
+  @include v.respond(big-24) { font-size: 76px; }
+  @include v.respond(big-32) { font-size: 92px; }
+}
+
+.typed {
+  margin: 6px 0 0;
+  font-family: v.$font-display;
+  font-size: clamp(17px, 2.4vw, 24px);
+  color: v.$color-accent;
+  min-height: 1.4em;
+}
+
+.caret {
+  display: inline-block;
+  width: 2px;
+  height: 0.95em;
+  margin-left: 3px;
+  background: v.$color-accent;
+  vertical-align: -0.15em;
+  animation: blink 1s steps(1) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+
+.socials {
+  margin-top: 22px;
+  display: flex;
+  gap: 12px;
+
+  a {
+    display: grid;
+    place-items: center;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    color: v.$color-ink;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid v.$color-edge;
+    transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
+
+    &:hover { background: v.$color-accent; color: #1a1206; transform: translateY(-2px); }
+  }
+}
