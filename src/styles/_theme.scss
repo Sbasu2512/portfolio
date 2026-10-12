@@ -1,0 +1,24 @@
+@use "./variables" as v;
+
+// ---------------------------------------------------------------------------
+// Helpers for pages that have two looks:
+//   • photo pages (WebGL)     — the original dark glass, no custom properties set
+//   • gradient pages (no WebGL) — PageShell sets --card-*, --th-ink*, etc. from
+//                                  theme/pageThemes.ts, which override the fallbacks
+// Every var() below falls back to the photo-page value, so nothing changes
+// unless PageShell has set the property.
+// ---------------------------------------------------------------------------
+
+@mixin themed-glass($photo-bg, $photo-radius: 18px) {
+  border-radius: var(--th-card-radius, #{$photo-radius});
+  border: 1px solid var(--th-card-edge, #{v.$color-edge});
+  background: var(--th-card-bg, #{$photo-bg});
+  backdrop-filter: var(--th-card-blur, blur(14px) saturate(1.15));
+  -webkit-backdrop-filter: var(--th-card-blur, blur(14px) saturate(1.15));
+}
+
+@function ink() { @return var(--th-ink, #{v.$color-ink}); }
+@function ink-dim() { @return var(--th-ink-dim, #{v.$color-ink-dim}); }
+@function accent-2() { @return var(--th-accent-2, #{v.$color-accent-2}); }
+
+@function heading-size($photo: clamp(30px, 6vw, 58px)) { @return var(--th-heading-size, #{$photo}); }

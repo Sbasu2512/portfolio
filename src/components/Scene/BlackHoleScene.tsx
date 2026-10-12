@@ -119,7 +119,11 @@ void main(){
 const VERT = `void main(){ gl_Position = vec4(position.xy, 0.0, 1.0); }`;
 
 /** Three.js full-screen shader: the swirling accretion disc behind the landing page. */
-export default function BlackHoleScene({ className }: { className?: string }) {
+/**
+ * `onFail` lets the app switch every page to the gradient themes if WebGL dies at runtime;
+ * the CSS stand-in below is still used when the scene is rendered on its own.
+ */
+export default function BlackHoleScene({ className, onFail }: { className?: string; onFail?: (reason: string) => void }) {
   const mountRef = useRef<HTMLDivElement | null>(null);
   const [failed, setFailed] = useState(false);
 
@@ -136,6 +140,7 @@ export default function BlackHoleScene({ className }: { className?: string }) {
     } catch (err) {
       console.error("BlackHoleScene: WebGL unavailable, falling back to CSS.", err);
       setFailed(true);
+      onFail?.("BlackHoleScene: WebGL unavailable");
       return;
     }
 
@@ -188,12 +193,14 @@ export default function BlackHoleScene({ className }: { className?: string }) {
           console.error("BlackHoleScene: render failed, stopping loop.", err);
           cancelAnimationFrame(raf);
           setFailed(true);
+          onFail?.("BlackHoleScene: render failed");
         }
       }
       frame();
     } catch (err) {
       console.error("BlackHoleScene: setup failed, falling back to CSS.", err);
       setFailed(true);
+      onFail?.("BlackHoleScene: setup failed");
     }
 
     return () => {

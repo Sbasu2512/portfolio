@@ -22,7 +22,7 @@ export default function EducationPage() {
   }, []);
 
   return (
-    <PageShell scene={<HarborScene />} sceneKey="harbor">
+    <PageShell scene={<HarborScene />} sceneKey="harbor" theme="education" scrim="edge">
       <div className="container">
         <h1 className={styles.heading}>Education</h1>
         <div className={styles.panel}>

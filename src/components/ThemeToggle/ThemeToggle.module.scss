@@ -1,0 +1,21 @@
+@use "../../styles/variables" as v;
+
+// Same footprint as Nav's .logo (40x40, circular) since it sits in the same slot — see Nav.tsx.
+.toggle {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 45%;
+  border: 1px solid var(--th-chrome-edge, v.$color-edge);
+  background: var(--th-chrome-bg, rgba(255, 255, 255, 0.06));
+  color: var(--th-nav-ink, #fff);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+
+  &:hover { transform: scale(1.06); }
+  &:active { transform: scale(0.96); }
+
+  svg { display: block; }
+}

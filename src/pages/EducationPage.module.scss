@@ -1,19 +1,18 @@
 @use "../styles/variables" as v;
+@use "../styles/theme" as t;
 
 .heading {
-  font-size: clamp(30px, 6vw, 58px);
-  text-align: center;
+  font-size: t.heading-size();
+  text-align: var(--th-heading-align, center);
   margin-bottom: 24px;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+  text-shadow: var(--th-heading-shadow, 0 4px 30px rgba(0, 0, 0, 0.7));
 }
 
 .panel {
   position: relative;
-  max-width: 820px;
+  max-width: var(--th-card-maxw, 820px);
   margin: 0 auto;
-  border-radius: 18px;
-  @include v.glass;
-  background: rgba(10, 12, 18, 0.58);
+  @include t.themed-glass(rgba(10, 12, 18, 0.58));
   overflow: hidden;
 }
 
@@ -55,12 +54,12 @@
 .year {
   font-family: v.$font-display;
   font-size: 13px;
-  color: v.$color-violet;
+  color: var(--th-year, #{v.$color-violet});
   margin-bottom: 2px;
 }
 .course { font-size: 18px; margin: 0 0 4px; }
-.meta { margin: 0 0 8px; font-size: 12px; color: v.$color-ink-dim; }
-.body { margin: 0; font-size: 13.5px; line-height: 1.65; color: v.$color-ink-dim; white-space: pre-line; }
+.meta { margin: 0 0 8px; font-size: 12px; color: t.ink-dim(); }
+.body { margin: 0; font-size: 13.5px; line-height: 1.65; color: t.ink-dim(); white-space: pre-line; }
 
 .fade {
   position: absolute;
@@ -70,7 +69,7 @@
   align-items: flex-end;
   justify-content: center;
   padding-bottom: 8px;
-  background: linear-gradient(180deg, rgba(10, 12, 18, 0), rgba(10, 12, 18, 0.9));
+  background: linear-gradient(180deg, transparent, var(--th-fade-to, rgba(10, 12, 18, 0.9)));
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;

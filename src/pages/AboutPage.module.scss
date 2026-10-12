@@ -1,23 +1,22 @@
 @use "../styles/variables" as v;
+@use "../styles/theme" as t;
 
 .card {
-  max-width: 780px;
+  max-width: var(--th-card-maxw, 780px);
   margin: 0 auto;
   padding: clamp(22px, 4vw, 40px);
-  border-radius: 18px;
-  @include v.glass;
-  background: rgba(6, 10, 8, 0.62);
+  @include t.themed-glass(rgba(6, 10, 8, 0.62));
 }
 
 .heading {
-  font-size: clamp(30px, 6vw, 58px);
-  text-align: center;
+  font-size: t.heading-size();
+  text-align: var(--th-heading-align, center);
   margin-bottom: 20px;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+  text-shadow: var(--th-heading-shadow, 0 4px 30px rgba(0, 0, 0, 0.7));
 }
 
 .copy {
-  color: v.$color-ink;
+  color: t.ink();
   font-size: 15px;
   line-height: 1.75;
 

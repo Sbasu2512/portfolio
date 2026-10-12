@@ -2,6 +2,8 @@ import { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { DataProvider, useData } from "@/context/DataContext";
 import { AudioProvider } from "@/context/AudioContext";
+import { RenderModeProvider } from "@/hooks/useRenderMode";
+import { GradientThemeProvider } from "@/hooks/useGradientTheme";
 import ErrorBoundary from "@/components/ErrorBoundary/ErrorBoundary";
 import Loader from "@/components/Loader/Loader";
 import HomePage from "@/pages/HomePage";
@@ -62,7 +64,11 @@ function AppShell() {
 export default function App() {
   return (
     <ErrorBoundary>
-      <AppShell />
+      <RenderModeProvider>
+        <GradientThemeProvider>
+          <AppShell />
+        </GradientThemeProvider>
+      </RenderModeProvider>
     </ErrorBoundary>
   );
 }

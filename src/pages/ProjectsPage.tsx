@@ -7,7 +7,7 @@ export default function ProjectsPage() {
   const { info } = useData();
 
   return (
-    <PageShell scene={<RainScene />} sceneKey="rain">
+    <PageShell scene={<RainScene />} sceneKey="rain" theme="projects" scrim="edge">
       <div className="container">
         <h1 className={styles.heading}>Projects</h1>
         <div className={styles.grid}>
