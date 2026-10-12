@@ -54,3 +54,15 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGE.
+
+---
+
+## Background photographs (`public/scenes/`)
+
+| File | Source | Notes |
+|---|---|---|
+| `about-forest.jpg` | Sebastian Unrau, Unsplash (`sp-p7uuT0tw`) | Unsplash licence; downscaled to 2560px wide |
+| `projects-taxi.jpg` | Dibakar Roy, Pexels (`2432543-18158843`) | Pexels licence |
+| `skills-gate.jpg` | "Biswa Bangla Gate" photo, supplied as `biswa_bangla_gate.jpg` (736×920) | **Author and licence not identified**. Low resolution: it is upscaled ~2× on a desktop screen. |
+| `work-city-night.jpg` | piqsels (`iftqd`) | Author not identified in the file — confirm the licence on the piqsels page |
+| `education-river.jpg` | wallpaperflare.com; carries a "Photography by MAYANKMRUG.COM" credit | **Licence unconfirmed.** Contact the photographer or replace with a licensed/own photo before publishing commercially. The credit in the image is deliberately left in place. |

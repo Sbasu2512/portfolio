@@ -1,10 +1,11 @@
 @use "../styles/variables" as v;
+@use "../styles/theme" as t;
 
 .heading {
-  font-size: clamp(30px, 6vw, 58px);
-  text-align: center;
+  font-size: t.heading-size();
+  text-align: var(--th-heading-align, center);
   margin-bottom: 26px;
-  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+  text-shadow: var(--th-heading-shadow, 0 4px 30px rgba(0, 0, 0, 0.7));
 }
 
 .grid {
@@ -19,9 +20,7 @@
 
 .card {
   padding: 20px;
-  border-radius: 16px;
-  @include v.glass;
-  background: rgba(6, 8, 14, 0.6);
+  @include t.themed-glass(rgba(6, 8, 14, 0.6), 16px);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -34,7 +33,7 @@
 }
 
 .name { font-size: 16.5px; }
-.desc { margin: 0; font-size: 13px; line-height: 1.6; color: v.$color-ink-dim; flex: 1; }
+.desc { margin: 0; font-size: 13px; line-height: 1.6; color: t.ink-dim(); flex: 1; }
 
 .stack {
   display: flex;
@@ -46,7 +45,7 @@
     padding: 3px 8px;
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.08);
-    color: v.$color-ink-dim;
+    color: t.ink-dim();
   }
 }
 
@@ -73,3 +72,23 @@
 }
 .liveBtn { background: rgba(87, 199, 133, 0.6); }
 .repoBtn { background: rgba(253, 29, 29, 0.6); }
+
+// The Figma gradient frame for Projects has no heading above the cards.
+// Keep it in the DOM for screen readers, just not on screen.
+:global([data-mode="gradient"]) .heading {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+// Gradient (no-WebGL) mode, both themes. The Figma button fills are 60%-opaque — fine over dark
+// glass, but on the light theme's pale glass they wash out and the white label drops to ~2:1.
+// Solid, slightly deeper fills keep it readable on either theme (white on these is >5:1), and the
+// tag chips borrow the theme's chrome tint so they stay visible on light glass too.
+:global([data-mode="gradient"]) {
+  .stack span { background: var(--th-chrome-bg); }
+  .liveBtn { background: #1f7a4a; }
+  .repoBtn { background: #b3261e; }
+}

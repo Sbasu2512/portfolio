@@ -22,7 +22,7 @@ export default function WorkExperiencePage() {
   }, []);
 
   return (
-    <PageShell scene={<CityScene />} sceneKey="city">
+    <PageShell scene={<CityScene />} sceneKey="city" theme="work" scrim="edge">
       <div className="container">
         <h1 className={styles.heading}>Work Experience</h1>
 

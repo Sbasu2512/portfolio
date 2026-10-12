@@ -21,10 +21,84 @@
   pointer-events: none;
 }
 
+// Photo pages: the photograph stays untouched except for two soft strips that
+// keep the nav and footer readable over bright skies.
+.edgeScrim {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(5, 7, 12, 0.5) 0, rgba(5, 7, 12, 0) 130px),
+    linear-gradient(0deg, rgba(5, 7, 12, 0.5) 0, rgba(5, 7, 12, 0) 110px);
+}
+
 .content {
   position: relative;
   z-index: 2;
   flex: 1;
   padding-top: calc(v.$nav-height + 18px);
   padding-bottom: 30px;
+}
+
+// ---------------------------------------------------------------------------
+// Gradient (no-WebGL) mode. Nav.tsx / Footer.tsx read their colours from the
+// --th-nav-ink / --th-footer-ink variables directly (see their own .scss), so
+// no colour overrides are needed here — this block is purely the pill-shaped
+// chrome background gradient mode adds behind the nav links and footer,
+// which webgl mode doesn't have (there the photo shows straight through).
+// ---------------------------------------------------------------------------
+.page[data-mode="gradient"] {
+  // Headings, card titles and the landing name set no colour of their own — they inherit this.
+  color: var(--th-ink);
+
+  footer > div {
+    background: var(--th-chrome-bg);
+    border-color: var(--th-chrome-edge);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  @media (min-width: 768px) {
+    header nav {
+      height: 56px;
+      padding-inline: 14px;
+      border-radius: 45px;
+      background: var(--th-chrome-bg);
+      border: 1px solid var(--th-chrome-edge);
+    }
+  }
+
+  header nav a::after { background: var(--th-nav-ink); }
+}
+
+// ---------------------------------------------------------------------------
+// Skills, WebGL mode only: the Biswa Bangla Gate photo's sky is bright, so
+// this one page swaps to dark text — everywhere it sits over that sky. The
+// footer sits over the road at the bottom of the photo, which stays dark, so
+// it keeps the usual light text (not overridden below). The pills always
+// have their own white text regardless of any of this (SkillsPage.module.scss) —
+// they sit on their own saturated colour, never directly on the photo.
+// ---------------------------------------------------------------------------
+.page[data-theme="skills"]:not([data-mode="gradient"]) {
+  --th-ink: #16212b;
+  --th-ink-dim: rgba(22, 33, 43, 0.72);
+  // The home icon and hamburger are always over the sky, in or out of the mobile menu.
+  --th-topbar-ink: #16212b;
+  // Nav links sit over the sky on desktop, but move into the mobile menu's own dark panel on
+  // small screens (see Nav.module.scss) — dark text there would be dark-on-dark, so flip back.
+  --th-nav-ink: #16212b;
+  --th-nav-ink-dim: rgba(22, 33, 43, 0.84);
+
+  @media (max-width: 767px) {
+    --th-nav-ink: #ffffff;
+    --th-nav-ink-dim: rgba(255, 255, 255, 0.72);
+  }
+
+  // The top edge scrim exists to darken bright sky behind light nav text. With dark text it
+  // would just grey the sky out and cost contrast, so drop it here. The bottom strip stays —
+  // the footer over the dark road is still light text.
+  .edgeScrim {
+    background: linear-gradient(0deg, rgba(5, 7, 12, 0.5) 0, rgba(5, 7, 12, 0) 110px);
+  }
 }

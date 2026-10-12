@@ -3,14 +3,16 @@ import PageShell from "@/components/PageShell/PageShell";
 import BlackHoleScene from "@/components/Scene/BlackHoleScene";
 import { useData } from "@/context/DataContext";
 import { useTypewriter } from "@/hooks/useTypewriter";
+import { useRenderMode } from "@/hooks/useRenderMode";
 import styles from "./HomePage.module.scss";
 
 export default function HomePage() {
   const { info } = useData();
   const typed = useTypewriter(info.personal.typewritter_words);
+  const { fallBackToGradient } = useRenderMode();
 
   return (
-    <PageShell scene={<BlackHoleScene />} sceneKey="blackhole">
+    <PageShell scene={<BlackHoleScene onFail={fallBackToGradient} />} sceneKey="blackhole" theme="home">
       <div className={[styles.hero, "container"].join(" ")}>
         <div className={styles.card}>
           <h1 className={styles.name}>{info.personal.name}</h1>

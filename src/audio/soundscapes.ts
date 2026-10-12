@@ -132,6 +132,8 @@ function forestAmbience(ctx: AudioContext, out: GainNode): Cleanup {
   wind.start();
   nodes.push(wind);
   const windLfo = lfo(ctx, 0.08, 250, windFilter.frequency, 700);
+  // Gusts: the wind swells and fades every ~9s. The About page light follows this.
+  const gustLfo = lfo(ctx, 0.11, 0.035, windGain.gain, 0.05);
 
   let alive = true;
   const timeouts: number[] = [];
@@ -158,6 +160,7 @@ function forestAmbience(ctx: AudioContext, out: GainNode): Cleanup {
     timeouts.forEach(clearTimeout);
     nodes.forEach((n) => n.stop());
     windLfo.stop();
+    gustLfo.stop();
   };
 }
 

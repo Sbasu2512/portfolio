@@ -31,6 +31,7 @@
   border-radius: 45%;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid v.$color-edge;
+  color: var(--th-topbar-ink, #{v.$color-ink}); // HomeIcon below is fill="currentColor"
 
   img { display: block; border-radius: 6px; }
 }
@@ -71,7 +72,7 @@
   font-family: v.$font-display;
   font-size: 15px;
   letter-spacing: 0.01em;
-  color: v.$color-ink-dim;
+  color: var(--th-nav-ink-dim, #{v.$color-ink-dim});
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.2s ease;
@@ -85,11 +86,11 @@
     background: v.$color-accent;
     transition: right 0.25s ease;
   }
-  &:hover { color: v.$color-ink; }
+  &:hover { color: var(--th-nav-ink, #{v.$color-ink}); }
   &:hover::after { right: 0; }
 }
 .active {
-  color: v.$color-ink;
+  color: var(--th-nav-ink, #{v.$color-ink});
   &::after { right: 0; }
 }
 
@@ -121,9 +122,14 @@
   span {
     display: block;
     height: 2px;
-    background: v.$color-ink;
+    background: var(--th-topbar-ink, #{v.$color-ink});
     border-radius: 2px;
   }
 
-  @media (max-width: 767px) { display: flex; }
+  @media (max-width: 767px) {
+    display: flex;
+    margin-left: auto; // opposite side from the home icon — the icon is removed from flow on
+                       // mobile (position: fixed) once open, so this holds the burger's side
+                       // whether or not the home icon is even rendered (see Nav.tsx)
+  }
 }

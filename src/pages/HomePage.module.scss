@@ -1,7 +1,9 @@
 @use "../styles/variables" as v;
+@use "../styles/theme" as t;
 
 .hero {
-  min-height: calc(100dvh - #{v.$nav-height} - 70px);
+  // nav + content top/bottom padding (18px + 30px) + footer pill (~62px)
+  min-height: calc(100dvh - #{v.$nav-height} - 110px);
   display: flex;
   align-items: center;
 }
@@ -9,9 +11,7 @@
 .card {
   max-width: 560px;
   padding: clamp(24px, 4vw, 40px);
-  border-radius: 22px;
-  @include v.glass;
-  background: rgba(10, 8, 6, 0.5);
+  @include t.themed-glass(rgba(10, 8, 6, 0.5), 22px);
 }
 
 .eyebrow {
@@ -26,7 +26,7 @@
   font-size: clamp(38px, 6vw, 64px);
   letter-spacing: -0.01em;
   line-height: 1.02;
-  text-shadow: 0 4px 40px rgba(0, 0, 0, 0.85);
+  text-shadow: var(--th-heading-shadow, 0 4px 40px rgba(0, 0, 0, 0.85));
 
   @include v.respond(big-24) { font-size: 76px; }
   @include v.respond(big-32) { font-size: 92px; }
@@ -67,5 +67,41 @@
     transition: background 0.2s ease, transform 0.2s ease, color 0.2s ease;
 
     &:hover { background: v.$color-accent; color: #1a1206; transform: translateY(-2px); }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Gradient (no-WebGL) landing — Figma node 4122:58: a 498×252 pill card sitting
+// bottom-left, centred text, plain icons. Text colour follows the active theme.
+// ---------------------------------------------------------------------------
+:global([data-mode="gradient"]) {
+  .hero {
+    max-width: none;
+    margin: 0;
+    align-items: flex-end;
+    padding-left: clamp(18px, 3.6vw, 51px);
+    padding-bottom: clamp(24px, 6vh, 64px);
+  }
+
+  .card {
+    width: min(498px, 100%);
+    text-align: center;
+  }
+
+  .eyebrow { color: var(--th-ink-dim); }
+  .typed { color: var(--th-ink); font-size: clamp(16px, 1.5vw, 20px); }
+  .caret { background: var(--th-ink); }
+
+  .socials {
+    justify-content: center;
+
+    a {
+      color: var(--th-ink);
+      background: transparent;
+      border-color: transparent;
+      width: 32px; height: 32px;
+
+      &:hover { background: var(--th-chrome-bg); color: var(--th-ink); }
+    }
   }
 }

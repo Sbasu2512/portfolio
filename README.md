@@ -1,8 +1,7 @@
 # Sayantan Basu — Portfolio
 
 React + TypeScript + SCSS single-page portfolio. Vite build, one data file, one
-route per nav link, everything animated with plain HTML/CSS canvas and one
-Three.js scene.
+route per nav link, animated with Three.js photo shaders (or CSS gradients when WebGL is unavailable).
 
 ## Run it
 
@@ -59,25 +58,87 @@ control, not automatically.
 Swap any generator for `new Audio("/your-track.mp3")` if you'd rather ship
 real recordings — `AudioContext.tsx`'s `setScene()` API doesn't care which.
 
-## Scenes
+## Two render modes: WebGL photos, or gradients
 
-Six of the seven backgrounds are plain `<canvas>` 2D animations
-(`src/components/Scene/*.tsx`), each running through a shared
-`useCanvasLoop` hook that handles resize, devicePixelRatio, and
-`prefers-reduced-motion` (renders one frame and stops). The landing page's
-black hole is Three.js — the same shader built earlier in this conversation,
-with the forest-texture sampling removed (deep space instead, since the
-forest belongs to the About page here).
+`src/hooks/useRenderMode.tsx` decides once at load:
 
-| Route | Scene | File |
+| Mode | When | Background |
 |---|---|---|
-| `/` | Swirling accretion disc | `BlackHoleScene.tsx` (Three.js) |
-| `/about` | Layered forest, hue-shifting light | `ForestScene.tsx` |
-| `/work-experience` | Night street, cars both directions | `CityScene.tsx` |
-| `/education` | Harbor sunset, ships, shimmering sun | `HarborScene.tsx` |
-| `/projects` | Rain hitting water, ripples | `RainScene.tsx` |
-| `/skills` | Daytime highway, no cyclists | `HighwayScene.tsx` |
-| loader | Star field with parallax streaks | `StarfieldScene.tsx` |
+| `webgl` | hardware-accelerated WebGL is available | Three.js shaders drawing the real photos (below) |
+| `gradient` | WebGL is blocked, disabled, or software-only (hardware acceleration off) | flat CSS gradients from the Figma frames |
+
+If WebGL dies *after* load (context lost, texture fails, shader throws) the whole
+site drops to `gradient` instead of showing a blank page. For testing:
+`?render=gradient`, `?render=webgl`, or `?render=auto` to clear the override
+(remembered for the browser tab).
+
+### Gradient themes: dark and light
+
+Gradient mode has two themes, the same on every page, defined in `src/theme/gradientThemes.ts`:
+
+| Theme | Background | Text |
+|---|---|---|
+| `dark` (default) | `#152331` → `#000000` | white |
+| `light` | `#fc5c7d` → `#6a82fb` | dark |
+
+The toggle button (`components/ThemeToggle`) replaces the home logo in the nav — gradient mode has
+no logo at all — and the choice persists in `localStorage` (`hooks/useGradientTheme.tsx`). WebGL mode
+ignores all of this: it keeps the home logo (hidden only on the landing page) and has no toggle.
+
+Colour and layout are split. `gradientThemes.ts` holds colour (gradient, ink, glass tint) and
+`theme/pageThemes.ts` holds per-page layout (card width, heading alignment, pill sizing); `PageShell`
+merges the two as `--th-*` CSS custom properties, and page styles read them through
+`src/styles/_theme.scss`, falling back to the photo-page look when a variable isn't set. (Prefixed
+`--th-` because `resume.scss` already defines a global `--ink`.) `Nav` and `Footer` read
+`--th-nav-ink` / `--th-topbar-ink` / `--th-footer-ink` directly, so they follow the theme with no
+overrides. To add a theme, add an entry to `GRADIENT_THEMES` and widen `GradientThemeId`.
+
+**Skills, WebGL mode** swaps to dark text because the gate photo's sky is bright — see the last rule
+in `PageShell.module.scss`. The footer stays light (it sits over the dark road), the mobile menu's
+links stay white (they sit on the menu's own dark panel), and the top edge scrim is removed on that
+page (it would grey the sky behind dark text).
+
+**Skills pills** always have white text. `utils/pillColor.ts` picks each pill's gradient by target
+*luminance* rather than HSL lightness, so white text keeps ≥ 4.5:1 on every hue (yellow and green are
+far brighter than blue at equal HSL lightness). Tune `LUMA_LIGHT_END` / `LUMA_DARK_END` to make them
+lighter or darker.
+
+## Scenes (WebGL mode)
+
+Every page except the landing page is one photograph drawn by `PhotoScene.tsx`
+(orthographic quad + `ShaderMaterial`, "object-fit: cover" maths) with a few restrained
+effects from `photoShaders.ts`. Textures are sampled raw so the pixels match the photo.
+
+| Route | Photo (`public/scenes/`) | Effects |
+|---|---|---|
+| `/` | — | Swirling accretion disc, `BlackHoleScene.tsx` |
+| `/about` | `about-forest.jpg` (mirrored, as in Figma) | light rays fanning from the clearing, drifting mist, dappled leaves, dust; **tied to the soundscape** — wind gusts swell the rays and sway the foliage, bird calls flash the clearing |
+| `/work-experience` | `work-city-night.jpg` | twinkling lamps; trams, cabs and headlights streaking along the roads in both directions |
+| `/education` | `education-river.jpg` | water ripples; the sun and its glitter/haze drift between deep amber and gold — always sunset, never daylight (photographer's credit left untouched) |
+| `/projects` | `projects-taxi.jpg` | falling rain in three depths, splashes and ripples on the wet road |
+| `/skills` | `skills-gate.jpg` (Biswa Bangla Gate) | pixelated to a coarse block grid + colour quantization (retro 8-bit look); breathing sunset, drifting haze, lights running along the flyover, roundabout and carriageways, all sampled at block resolution |
+| loader | — | Star field (canvas), `StarfieldScene.tsx` |
+
+Photo credits and licence notes are in `LICENSES.md`. Swap a photo by replacing the
+file (same name) or changing `src` in the matching `*Scene.tsx`; pointer parallax is
+off under `prefers-reduced-motion`, which also freezes the effects.
+
+**Sound-reactive light.** `AudioContext.getLevels()` reads an analyser that listens ahead of the
+volume control and returns `{ low, high }` (0..1; wind/rumble and bright sounds like bird calls).
+`PhotoScene` feeds them to the shader as `uLow` / `uHigh`; only the About scene uses them today.
+The calibration constants at the top of `AudioContext.tsx` were measured on the forest soundscape.
+
+**Sound is WebGL-only.** `PageShell` renders `<SoundToggle />` (and plays anything at all) only
+when `mode === "webgl"`; the gradient themes are silent, and switching to gradients mid-session
+(a WebGL failure) stops whatever was playing. There's no music setting to turn back on in
+gradient mode — the toggle simply isn't there.
+
+**Animation timing runs on wall-clock time** (`performance.now()`), not an accumulated per-frame
+delta — a capped delta-per-frame makes simulated time crawl behind real time on a slow GPU, since
+each frame can only advance the cap even when far more real time has passed. `PhotoScene.tsx`.
+
+**Shader safety net.** If an effect shader fails to compile on some GPU, `PhotoScene` logs the error and
+shows the plain photograph instead (and only falls back to gradients if that fails too).
 
 ## Resume route
 

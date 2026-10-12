@@ -8,7 +8,7 @@ export default function AboutPage() {
   const paragraphs = info.personal.about_me.split(/\n\n+/).filter(Boolean);
 
   return (
-    <PageShell scene={<ForestScene />} sceneKey="forest">
+    <PageShell scene={<ForestScene />} sceneKey="forest" theme="about" scrim="edge">
       <div className="container">
         <div className={styles.card}>
           <h1 className={styles.heading}>
